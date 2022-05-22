@@ -14,19 +14,15 @@ module.exports = merge(common, {
       rules: [
          {
             test: /\.css$/i,
-            use: [
-               MiniCssExtractPlugin.loader,
-               {
-                  loader: "css-loader",
-                  options: {
-                     modules: true,
-                  }
-               }
-            ]
+            use: [MiniCssExtractPlugin.loader, "css-loader"]
          }
       ]
    },
    optimization: {
       minimizer: [`...`, new CssMinimizerPlugin()]
+   },
+   performance: {
+      maxEntrypointSize: 512000,
+      maxAssetSize: 512000
    }
 });
