@@ -2,7 +2,7 @@
    height: 100vh;
    position: relative;
    width: 100%;
-   min-height: 720px;
+   min-height: 800px;
    color: var(--color-white);
 }
 
@@ -55,7 +55,7 @@
 }
 
 .hero-text {
-   margin: 1.75rem auto 3.5rem;
+   margin: clamp(1rem, 1vh, 1.75rem) auto clamp(1.75rem, 5vh, 3.5rem);
    text-align: center;
    width: 80%;
 }
@@ -78,8 +78,9 @@
    }
 
    .hero-text {
-      margin-top: 1.5rem;
+      margin-top: clamp(1.25rem, 1vh, 1.5rem);
       width: 77.5%;
+      max-height: 4.5rem;
    }
 }
 
