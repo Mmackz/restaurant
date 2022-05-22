@@ -1,4 +1,61 @@
-.hello {
-   color: red;
-   font-family: "League Spartan", sans-serif;
+:root {
+   --color-primary-light: #9e7f66;
+   --color-primary-dark: #111111;
+   --color-secondary-light: #5c6779;
+   --color-secodary-medium: #242b37;
+   --color-secondary-dark: #17192b;
+   --color-white: #ffffff;
+   --color-black: #000000;
+   --font-family: "League Spartan", sans-serif;
 }
+
+* {
+   box-sizing: border-box;
+}
+
+html {
+   font-size: clamp(40%, 1.275vw, 100%);
+}
+
+body {
+   font-family: var(--font-family);
+}
+
+/* typography */
+.heading-xl {
+   font-size: 5rem;
+   line-height: 5rem;
+   font-weight: 300;
+   letter-spacing: -1px;
+}
+
+.heading-l {
+   font-size: 3rem;
+   line-height: 3rem;
+   font-weight: 700;
+   letter-spacing: -0.5px;
+}
+
+.heading-m {
+   font-size: 1.25rem;
+   line-height: 1.5rem;
+   font-weight: 700;
+   letter-spacing: -0.25px;
+}
+
+.heading-s {
+   font-size: 1.0625rem;
+   line-height: 1.75rem;
+   font-weight: 600;
+   letter-spacing: 2.5px;
+}
+
+.text-med {
+   font-size: 1.25rem;
+   line-height: 1.875rem;
+}
+
+.text-reg {
+   line-height: 1.625rem;
+}
+   
