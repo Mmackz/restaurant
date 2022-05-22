@@ -1,13 +1,10 @@
+// global stylesheets
+import "./reset.css";
 import "./style.css";
 
-const h1 = document.createElement("h1");
-h1.innerText = "Hello World!";
-h1.classList.add("hello");
+// import components
+import Home from "./components/home";
 
-h1.onclick = async () => {
-   
-   const { default: home } = await import("./modules/home");
-   document.getElementById("root").innerHTML += home;
-};
+console.log(Home);
 
-document.getElementById("root").appendChild(h1);
+document.getElementById("root").append(Home);
