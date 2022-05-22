@@ -18,11 +18,11 @@ export const hero = (() => {
    const background = document.createElement("picture");
    background.innerHTML = `
       <source
-         media="(max-width: 540px)"
+         media="(max-width: 499.98px)"
          srcset="${heroBgMobile} 1x, ${heroBgMobile2x} 2x"
       />
       <source
-         media="(max-width: 768px)"
+         media="(max-width: 767.98px)"
          srcset="${heroBgTablet} 1x, ${heroBgTablet2x} 2x"
       />
       <source
@@ -33,14 +33,23 @@ export const hero = (() => {
    `;
    section.append(background);
 
-   // create div for hero content
+   // add hero content
    const content = document.createElement("div");
    content.classList.add("hero-content");
-   content.innerHTML = `
-      <div class="logo">
-         <img src="${logo}" alt="Logo" />
-      </div>
+
+   // add logo
+   const logoContainer = document.createElement("div");
+   logoContainer.classList.add("logo");
+   logoContainer.innerHTML = `<img src="${logo}" alt="Logo" />`;
+   content.append(logoContainer);
+
+   content.innerHTML += `
       <h1 class="heading-xl hero-heading">Exquisite dining since 1989</h1>
+      <p class="text-lg hero-text">
+         Experience our seasonal menu in beautiful country surroundings. Eat the freshest
+         produce from the comfort of our farmhouse.
+      </p>
+      <button id="book-table" class="button button-dark hero-button heading-s">Book A Table</button>
    `;
    section.append(content);
 

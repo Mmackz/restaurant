@@ -1,7 +1,20 @@
 .hero {
    height: 100vh;
    position: relative;
-   min-height: 800px;
+   width: 100%;
+   min-height: 720px;
+   color: var(--color-white);
+}
+
+.hero::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+   background-color: #111111;
+   z-index: -2;
 }
 
 .hero::after {
@@ -10,22 +23,108 @@
    top: 0;
    right: 0;
    width: 100%;
-   height: 40%;
-   background-color: #979797;
-   opacity: 0.03;
+   height: 29%;
+   background-color: var(--color-primary-light);
+   opacity: 0.04;
 }
 
 .hero-image {
    position: absolute;
    top: 0;
-   left: 0;
+   left: 50%;
+   transform: translateX(-50%);
+   max-width: 100%;
+   width: 400px;
    z-index: -1;
    display: block;
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
+}
+
+.hero-content {
+   padding-top: 16rem;
+}
+
+.hero-button {
+   margin: 0 auto;
 }
 
 .hero-heading {
-   color: var(--color-white);
+   margin: 0 auto;
+   text-align: center;
+   max-width: 12ch;
+   margin-top: 3rem;
+}
+
+.hero-text {
+   margin: 1.75rem auto 3.5rem;
+   text-align: center;
+   width: 80%;
+}
+
+@media (min-width: 500px) {
+   .hero-image {
+      min-width: clamp(600px, 100%, 700px);
+   }
+
+   .hero::after {
+      height: 35%;
+   }
+
+   .hero-content {
+      padding-top: 19rem;
+   }
+
+   .hero-heading {
+      margin-top: 2.5rem;
+   }
+
+   .hero-text {
+      margin-top: 1.5rem;
+      width: 77.5%;
+   }
+}
+
+@media (min-width: 768px) {
+   .hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 60%;
+   }
+
+   .hero::after {
+      right: 0;
+      width: 66%;
+      height: 100%;
+   }
+
+   .hero-content {
+      max-width: 1320px;
+      padding-top: 4rem;
+      margin: 0 auto;
+      padding-left: 3rem;
+   }
+
+   .hero-text,
+   .hero-heading {
+      text-align: left;
+      margin: 0;
+   }
+
+   .hero-heading {
+      margin-top: 9rem;
+   }
+
+   .hero-text {
+      max-width: 28rem;
+      margin-top: 1.25rem;
+      margin-bottom: 2.5rem;
+   }
+
+   .hero-button {
+      margin: 0;
+   }
+
+   .hero .logo {
+      margin: 0;
+   }
 }
