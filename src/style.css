@@ -15,7 +15,6 @@
 
 body {
    font-family: var(--font-family);
-   background: #111111;
    overflow-x: hidden;
 }
 

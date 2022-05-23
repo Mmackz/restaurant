@@ -4,6 +4,7 @@
    width: 100%;
    min-height: 800px;
    color: var(--color-white);
+   overflow: hidden;
 }
 
 .hero::before {
@@ -61,12 +62,16 @@
 }
 
 @media (min-width: 500px) {
+   .hero {
+      min-height: 880px;
+   }
+
    .hero-image {
-      min-width: clamp(600px, 100%, 700px);
+      min-width: clamp(640px, 100%, 700px);
    }
 
    .hero::after {
-      height: 35%;
+      height: 33%;
    }
 
    .hero-content {

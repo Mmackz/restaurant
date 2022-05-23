@@ -14,6 +14,9 @@ import {
    locallySourcedTablet2x,
    locallySourcedMobile,
    locallySourcedMobile2x,
+   patternCurveTopLeft,
+   patternCurveTopRight,
+   patternLines
 } from "/src/images";
 
 export const info = (() => {
@@ -51,6 +54,24 @@ export const info = (() => {
       "All our ingredients come directly from our farm or local fishery. So you can be sure that you’re eating the freshest, most sustainable food."
    );
    section.append(infoCardBottom);
+
+   // add patterns
+   const patternTopRight = document.createElement("img");
+   patternTopRight.src = patternCurveTopRight;
+   patternTopRight.alt = "Background Pattern";
+   patternTopRight.classList.add("pattern", "pattern-curve", "pattern-curve-top-right");
+
+   const patternTopLeft = document.createElement("img");
+   patternTopLeft.src = patternCurveTopLeft;
+   patternTopLeft.alt = "Background Pattern";
+   patternTopLeft.classList.add("pattern", "pattern-curve", "pattern-curve-top-left");
+
+   const patternLine = document.createElement("img");
+   patternLine.src = patternLines;
+   patternLine.alt = "Foreground Line Pattern";
+   patternLine.classList.add("pattern", "pattern-lines");
+
+   section.append(patternTopRight, patternTopLeft, patternLine);
 
    return section;
 })();
