@@ -31,6 +31,7 @@ export { default as locallySourcedMobile2x } from "./locally-sourced-mobile@2x.j
 export { default as locallySourcedTablet } from "./locally-sourced-tablet.jpg";
 export { default as locallySourcedTablet2x } from "./locally-sourced-tablet@2x.jpg";
 export { default as logo } from "./logo.svg";
+export { default as patternDivide } from "./pattern-divide.svg";
 export { default as readyBgDesktop } from "./ready-bg-desktop.jpg";
 export { default as readyBgDesktop2x } from "./ready-bg-desktop@2x.jpg";
 export { default as readyBgMobile } from "./ready-bg-mobile.jpg";
