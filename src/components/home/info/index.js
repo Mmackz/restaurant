@@ -53,6 +53,13 @@ export const info = (() => {
       "The most locally sourced food",
       "All our ingredients come directly from our farm or local fishery. So you can be sure that you’re eating the freshest, most sustainable food."
    );
+
+   const patternLine = document.createElement("img");
+   patternLine.src = patternLines;
+   patternLine.alt = "Foreground Line Pattern";
+   patternLine.classList.add("pattern", "pattern-lines");
+   infoCardBottom.append(patternLine);
+
    section.append(infoCardBottom);
 
    // add patterns
@@ -66,12 +73,7 @@ export const info = (() => {
    patternTopLeft.alt = "Background Pattern";
    patternTopLeft.classList.add("pattern", "pattern-curve", "pattern-curve-top-left");
 
-   const patternLine = document.createElement("img");
-   patternLine.src = patternLines;
-   patternLine.alt = "Foreground Line Pattern";
-   patternLine.classList.add("pattern", "pattern-lines");
-
-   section.append(patternTopRight, patternTopLeft, patternLine);
+   section.append(patternTopRight, patternTopLeft);
 
    return section;
 })();
