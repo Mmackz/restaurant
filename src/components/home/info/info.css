@@ -3,7 +3,7 @@
 }
 
 .info-card {
-   padding: 0 1.5rem 1.75rem;
+   padding: 0 1.5rem 0rem;
    transform: translateY(-4.5rem);
 }
 
@@ -30,7 +30,7 @@
 }
 
 .info-divider {
-   padding: 3rem 0 2.25rem;
+   padding: 2.75rem 0 2rem;
 }
 
 .info-heading {
@@ -74,11 +74,11 @@
    }
 
    .pattern-curve {
-      min-height: 320px;
+      max-height: 320px;
    }
 
    .pattern-curve-top-right {
-      top: 8.5%;
+      top: 9%;
       left: -50%;
    }
 
@@ -91,5 +91,11 @@
 @media (min-width: 680px) {
    .pattern-lines {
       right: 4.5%;
+   }
+}
+
+@media (min-width: 768px) {
+   .info-card {
+      display: flex;
    }
 }
