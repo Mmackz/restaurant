@@ -2,7 +2,7 @@
    --color-primary-light: #9e7f66;
    --color-primary-dark: #111111;
    --color-secondary-light: #5c6779;
-   --color-secodary-medium: #242b37;
+   --color-secondary-medium: #242b37;
    --color-secondary-dark: #17192b;
    --color-white: #ffffff;
    --color-black: #000000;
@@ -36,8 +36,8 @@ img {
 }
 
 .heading-l {
-   font-size: 2rem;
-   line-height: 2.5rem;
+   font-size: clamp(2rem, 7.5vw, 2.25rem);
+   line-height: clamp(2rem, 7.5vw, 2.25rem);
    font-weight: 700;
    letter-spacing: -0.4px;
 }
@@ -127,4 +127,10 @@ img {
 .button-dark:focus {
    color: var(--color-primary-dark);
    background-color: var(--color-white);
+}
+
+/* divider pattern */
+.divider {
+   width: 80px;
+   margin: 0 auto;
 }
