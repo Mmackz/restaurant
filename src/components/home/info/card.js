@@ -29,7 +29,6 @@ export const InfoCard = (images, alt, heading, text) => {
    const divider = document.createElement("div");
    divider.classList.add("divider", "info-divider");
    divider.innerHTML = `<img src="${patternDivide}" alt="Divider" />`;
-   infoCard.append(divider);
 
    const infoContent = document.createElement("article");
    infoContent.classList.add("info-content");
@@ -37,6 +36,7 @@ export const InfoCard = (images, alt, heading, text) => {
          <h2 class="heading-l info-heading">${heading}</h2>
          <p class="text-lg info-text">${text}</p>
       `;
+   infoContent.prepend(divider);
    infoCard.append(infoContent);
 
    return infoCard;
