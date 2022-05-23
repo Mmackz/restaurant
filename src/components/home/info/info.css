@@ -111,11 +111,15 @@
 
    .info-card .text-lg {
       font-size: clamp(1rem, 1.75vw, 1.25rem);
-      line-height: clamp(1.5rem, 2vw, 1.875rem);
+      line-height: clamp(1.75rem, 2vw, 1.875rem);
    }
 
    .info-card:first-of-type {
       padding-bottom: 0;
+   }
+
+   .info-card:first-of-type .info-content {
+      margin-left: 2rem;
    }
 
    .info-card:last-of-type {
@@ -126,6 +130,7 @@
 
    .info-heading {
       margin: 0 0 1.75rem;
+      max-width: 12ch;
    }
 
    .info-content {
@@ -133,7 +138,12 @@
       align-self: center;
       margin: 0;
       padding: 0;
-      width: clamp(25rem, 10vw, 40rem);
+      flex-shrink: 2;
+      width: 80%;
+   }
+
+   .info-text {
+      width: clamp(25rem, 33vw, 30rem);
    }
 
    .info-divider {
