@@ -1,5 +1,5 @@
 import "./info.css";
-import { Card } from "./card.js";
+import { Card } from "/src/components/shared/card";
 
 import {
    enjoyablePlaceDesktop,
