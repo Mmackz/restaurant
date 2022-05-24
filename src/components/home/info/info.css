@@ -3,7 +3,7 @@
 }
 
 .info-card {
-   padding: 0 1.5rem 0rem;
+   padding: 0 1.5rem 1.5rem;
    transform: translateY(-4rem);
 }
 
@@ -25,12 +25,12 @@
    color: var(--color-secondary-medium);
    text-align: center;
    max-width: 26rem;
-   padding: 0 2.75rem;
+   padding: 0 0.5rem;
    margin: 0 auto;
 }
 
 .card-divider {
-   padding: 3rem 0 2.25rem;
+   padding: 3.25rem 0 2.5rem;
 }
 
 .card-heading {
