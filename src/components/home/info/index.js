@@ -19,7 +19,7 @@ import {
    patternLines
 } from "/src/images";
 
-export const info = (() => {
+export const Info = (() => {
    // create info section
    const section = document.createElement("section");
    section.classList.add("info");

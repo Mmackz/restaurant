@@ -9,7 +9,7 @@ import {
    logo
 } from "/src/images";
 
-export const hero = (() => {
+export const Hero = (() => {
    // create hero section
    const section = document.createElement("section");
    section.classList.add("hero");
