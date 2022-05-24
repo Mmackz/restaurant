@@ -1,5 +1,5 @@
 import "./info.css";
-import { InfoCard } from "./card.js";
+import { Card } from "./card.js";
 
 import {
    enjoyablePlaceDesktop,
@@ -25,7 +25,7 @@ export const Info = (() => {
    section.classList.add("info");
 
    // add info cards
-   const infoCardTop = InfoCard(
+   const infoCardTop = Card(
       [
          enjoyablePlaceMobile,
          enjoyablePlaceMobile2x,
@@ -38,9 +38,10 @@ export const Info = (() => {
       "Enjoyable place for all the family",
       "Our relaxed surroundings make dining with us a great experience for everyone. We can even arrange a tour of the farm before your meal."
    );
+   infoCardTop.classList.add("info-card");
    section.append(infoCardTop);
 
-   const infoCardBottom = InfoCard(
+   const infoCardBottom = Card(
       [
          locallySourcedMobile,
          locallySourcedMobile2x,
@@ -54,6 +55,7 @@ export const Info = (() => {
       "All our ingredients come directly from our farm or local fishery. So you can be sure that you’re eating the freshest, most sustainable food."
    );
 
+   infoCardBottom.classList.add("info-card");
    const patternLine = document.createElement("img");
    patternLine.src = patternLines;
    patternLine.alt = "Foreground Line Pattern";
