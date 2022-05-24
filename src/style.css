@@ -35,8 +35,8 @@ img {
 }
 
 .heading-l {
-   font-size: clamp(2rem, 7.5vw, 2.25rem);
-   line-height: clamp(2rem, 7.5vw, 2.25rem);
+   font-size: clamp(2.1rem, 7.75vw, 2.25rem);
+   line-height: 2.25rem;
    font-weight: 700;
    letter-spacing: -0.4px;
 }
