@@ -56,7 +56,7 @@
    }
 
    .card-text {
-      width: clamp(25rem, 33vw, 30rem);
+      width: clamp(22rem, 33vw, 30rem);
    }
 
    .card-divider {
