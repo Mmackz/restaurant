@@ -75,7 +75,8 @@
    }
 
    .hero-content {
-      padding-top: 19rem;
+      /* padding-top: 19rem; */
+      padding-top: clamp(19rem, 36vh, 25rem);
    }
 
    .hero-heading {
