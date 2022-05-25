@@ -40,7 +40,7 @@
    }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
    .card-heading {
       margin: 0 0 1.75rem;
       max-width: 12ch;

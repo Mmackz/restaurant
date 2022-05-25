@@ -54,7 +54,7 @@
    }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
    .info-card {
       display: flex;
       max-width: 1280px;

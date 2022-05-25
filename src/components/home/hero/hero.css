@@ -89,7 +89,7 @@
    }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
    .hero-image {
       width: 100%;
       height: 100%;
