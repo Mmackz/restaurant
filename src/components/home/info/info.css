@@ -21,6 +21,10 @@
 }
 
 @media (min-width: 500px) {
+   .info {
+      padding-bottom: 0.75rem;
+   }
+
    .pattern {
       display: block;
       position: absolute;
