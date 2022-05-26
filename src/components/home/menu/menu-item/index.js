@@ -6,7 +6,10 @@ export const MenuItem = ((images, alt, heading, text) => {
    menuItem.classList.add("menu-item");
 
    // create menu item image
-   const image = makeImage(images, alt);
+   const imageContainer = document.createElement("div");
+   imageContainer.classList.add("menu-item-image-container");
+   const image = makeImage(images, alt, "menu-item-image");
+   imageContainer.append(image);
 
    // create menu item heading
    const itemHeading = document.createElement("h3");
@@ -23,7 +26,7 @@ export const MenuItem = ((images, alt, heading, text) => {
    content.classList.add("menu-item-content");
    content.append(itemHeading, itemText);
 
-   menuItem.append(image, content);
+   menuItem.append(imageContainer, content);
 
    return menuItem
 });

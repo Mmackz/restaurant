@@ -20,3 +20,14 @@
    padding-top: 2.5rem;
    padding-bottom: 2.25rem;
 }
+
+.menu-items {
+   max-width: 600px;
+   margin: 0 auto;
+}
+
+@media (min-width: 500px) {
+   .menu-header .card-divider {
+      padding: 3rem 0 2.75rem;
+   }
+}
