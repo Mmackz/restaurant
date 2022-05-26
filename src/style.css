@@ -83,7 +83,7 @@ img {
    }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 960px) {
    .heading-xl {
       font-size: clamp(4rem, 7.5vw, 5rem);
       line-height: clamp(4.75rem, 8vw, 5.25rem);

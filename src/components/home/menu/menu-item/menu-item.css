@@ -64,3 +64,10 @@
       padding: 0;
    }
 }
+
+@media (min-width: 960px) {
+   .menu-item-image-container {
+      height: clamp(98px, calc(11vw * 0.766), 118px);
+      width: clamp(128px, 11vw, 154px);
+   }
+}

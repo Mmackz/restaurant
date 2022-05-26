@@ -31,3 +31,9 @@
       padding: 3rem 0 2.75rem;
    }
 }
+
+@media (min-width: 960px) {
+   .menu {
+      display: flex;
+   }
+}

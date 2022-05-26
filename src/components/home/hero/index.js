@@ -22,11 +22,11 @@ export const Hero = (() => {
          srcset="${heroBgMobile} 1x, ${heroBgMobile2x} 2x"
       />
       <source
-         media="(max-width: 899.98px)"
+         media="(max-width: 959.98px)"
          srcset="${heroBgTablet} 1x, ${heroBgTablet2x} 2x"
       />
       <source
-         media="(min-width: 900px)"
+         media="(min-width: 960px)"
          srcset="${heroBgDesktop} 1x, ${heroBgDesktop2x} 2x"
       />
       <img class="hero-image" src="${heroBgDesktop}" alt="Hero image" width="100%" />
