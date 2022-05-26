@@ -21,6 +21,9 @@ export const Menu = (() => {
    const section = document.createElement("section");
    section.classList.add("menu");
 
+   const sectionInner = document.createElement("div");
+   sectionInner.classList.add("menu-inner");
+
    // create menu header
    const menuHeader = Card(
       null,
@@ -29,7 +32,7 @@ export const Menu = (() => {
       "We cater for all dietary requirements, but here’s a glimpse at some of our diner’s favourites. Our menu is revamped every season."
    );
    menuHeader.classList.add("menu-header");
-   section.append(menuHeader);
+   sectionInner.append(menuHeader);
 
    // create menu items
    const menuItems = document.createElement("div");
@@ -60,7 +63,8 @@ export const Menu = (() => {
    );
 
    menuItems.append(menu1, menu2, menu3);
-   section.append(menuItems);
+   sectionInner.append(menuItems);
+   section.append(sectionInner);
 
    return section;
 })();
