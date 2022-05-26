@@ -18,7 +18,7 @@ export const Hero = (() => {
    const background = document.createElement("picture");
    background.innerHTML = `
       <source
-         media="(max-width: 499.98px)"
+         media="(max-width: 539.98px)"
          srcset="${heroBgMobile} 1x, ${heroBgMobile2x} 2x"
       />
       <source

@@ -29,7 +29,7 @@
    height: 100%;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 540px) {
    .menu-item {
       display: flex;
       max-width: none;

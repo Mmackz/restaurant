@@ -64,7 +64,7 @@ img {
    line-height: 1.625rem;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 540px) {
    .heading-xl {
       font-size: 3rem;
       line-height: 4rem;
@@ -98,7 +98,7 @@ img {
    height: 32px;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 540px) {
    .logo {
       width: 103px;
       height: 40px;
