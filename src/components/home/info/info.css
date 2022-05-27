@@ -92,6 +92,10 @@
       transform: translateY(4rem);
    }
 
+   .info-card:last-of-type .card-image {
+      box-shadow: none;
+   }
+
    .pattern-curve-top-right {
       left: -37.5%;
    }
