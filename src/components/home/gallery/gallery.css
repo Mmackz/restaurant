@@ -1,0 +1,12 @@
+.gallery {
+   margin-top: 5rem;
+}
+
+.gallery-content {
+   max-width: 325px;
+   padding: 0 1rem;
+}
+
+.gallery-content > p {
+   margin-bottom: 1.75rem;
+}
