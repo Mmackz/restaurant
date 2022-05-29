@@ -1,5 +1,5 @@
 import "./gallery.css";
-import { makeImage } from "/src/components/shared/picture.js";
+import { makeImage } from "/src/components/shared/picture";
 import {
    familyGatheringDesktop,
    familyGatheringDesktop2x,
@@ -21,14 +21,16 @@ export const Gallery = (() => {
 
    // set default image
    const defaultImage = makeImage(
-      [familyGatheringMobile,
-      familyGatheringMobile2x,
-      familyGatheringTablet,
-      familyGatheringTablet2x,
-      familyGatheringDesktop,
-      familyGatheringDesktop2x],
+      [
+         familyGatheringMobile,
+         familyGatheringMobile2x,
+         familyGatheringTablet,
+         familyGatheringTablet2x,
+         familyGatheringDesktop,
+         familyGatheringDesktop2x
+      ],
       "Family Gathering"
-   );
+   )
 
    imageContainer.appendChild(defaultImage);
    section.appendChild(imageContainer);
@@ -37,19 +39,18 @@ export const Gallery = (() => {
    const galleryItems = document.createElement("ul");
    galleryItems.classList.add("gallery-items");
    galleryItems.innerHTML = `
-      <li class="gallery-item" data-item="1">Family Gathering</li>
-      <li class="gallery-item" data-item="2">Special Events</li>
-      <li class="gallery-item" data-item="3">Social Events</li>
+      <li class="gallery-item heading-s active" data-item="1">Family Gathering</li>
+      <li class="gallery-item heading-s inactive" data-item="2">Special Events</li>
+      <li class="gallery-item heading-s inactive" data-item="3">Social Events</li>
    `;
 
    // create a container for the gallery text content
    const galleryContent = document.createElement("div");
-   galleryContent.setAttribute("id", "gallery-text");
    galleryContent.classList.add("gallery-content", "card-content");
 
    galleryContent.innerHTML = `
-      <h3 class="heading-l card-heading">Family Gathering</h3>
-      <p class="text-lg card-text">We love catering for entire families. So please bring everyone along for a special meal with your loved ones. We’ll provide a memorable experience for all.</p>
+      <h3 id="gallery-heading" class="heading-l card-heading">Family Gathering</h3>
+      <p id="gallery-text" class="text-lg card-text">We love catering for entire families. So please bring everyone along for a special meal with your loved ones. We’ll provide a memorable experience for all.</p>
       <button class="button button-light hero-button heading-s">Book A Table</button>
    `;
 
