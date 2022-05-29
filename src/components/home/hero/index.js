@@ -49,7 +49,7 @@ export const Hero = (() => {
          Experience our seasonal menu in beautiful country surroundings. Eat the freshest
          produce from the comfort of our farmhouse.
       </p>
-      <button id="book-table" class="button button-dark hero-button heading-s">Book A Table</button>
+      <button class="button button-dark hero-button heading-s">Book A Table</button>
    `;
    section.append(content);
 
