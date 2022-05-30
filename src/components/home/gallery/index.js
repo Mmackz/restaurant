@@ -1,13 +1,6 @@
 import "./gallery.css";
 import { makeImage } from "/src/components/shared/picture";
-import {
-   familyGatheringDesktop,
-   familyGatheringDesktop2x,
-   familyGatheringTablet,
-   familyGatheringTablet2x,
-   familyGatheringMobile,
-   familyGatheringMobile2x
-} from "/src/images";
+import * as images from "/src/images";
 
 export const Gallery = (() => {
    // create the gallery section
@@ -19,29 +12,53 @@ export const Gallery = (() => {
    imageContainer.setAttribute("id", "gallery-image");
    imageContainer.classList.add("gallery-image-container");
 
-   // set default image
-   const defaultImage = makeImage(
-      [
-         familyGatheringMobile,
-         familyGatheringMobile2x,
-         familyGatheringTablet,
-         familyGatheringTablet2x,
-         familyGatheringDesktop,
-         familyGatheringDesktop2x
-      ],
-      "Family Gathering"
-   )
+   // set images
+   imageContainer.append(
+      makeImage(
+         [
+            images.familyGatheringMobile,
+            images.familyGatheringMobile2x,
+            images.familyGatheringTablet,
+            images.familyGatheringTablet2x,
+            images.familyGatheringDesktop,
+            images.familyGatheringDesktop2x
+         ],
+         "Family Gathering",
+         ["card-image", "is-active"]
+      ),
+      makeImage(
+         [
+            images.specialEventsMobile,
+            images.specialEventsMobile2x,
+            images.specialEventsTablet,
+            images.specialEventsTablet2x,
+            images.specialEventsDesktop,
+            images.specialEventsDesktop2x
+         ],
+         "Special Events"
+      ),
+      makeImage(
+         [
+            images.socialEventsMobile,
+            images.socialEventsMobile2x,
+            images.socialEventsTablet,
+            images.socialEventsTablet2x,
+            images.socialEventsDesktop,
+            images.socialEventsDesktop2x
+         ],
+         "Social Events"
+      )
+   );
 
-   imageContainer.appendChild(defaultImage);
    section.appendChild(imageContainer);
 
    // create list of choices for gallery images
    const galleryItems = document.createElement("ul");
    galleryItems.classList.add("gallery-items");
    galleryItems.innerHTML = `
-      <li class="gallery-item heading-s active" data-item="1">Family Gathering</li>
-      <li class="gallery-item heading-s inactive" data-item="2">Special Events</li>
-      <li class="gallery-item heading-s inactive" data-item="3">Social Events</li>
+      <li class="gallery-item heading-s active" data-item="0">Family Gathering</li>
+      <li class="gallery-item heading-s inactive" data-item="1">Special Events</li>
+      <li class="gallery-item heading-s inactive" data-item="2">Social Events</li>
    `;
 
    // create a container for the gallery text content

@@ -5,7 +5,6 @@
 
 .gallery-content {
    max-width: 355px;
-   min-height: 400px;
    padding: 0 1rem;
 }
 
@@ -20,6 +19,21 @@
 .gallery-image-container {
    min-height: 440px;
    margin: 0 auto;
+   position: relative;
+}
+
+.gallery .card-image {
+   position: absolute;
+   width: calc((100% - 3rem));
+   top: 0;
+   left: 50%;
+   transform: translateX(-50%);
+   opacity: 0;
+   transition: opacity 0.5s ease-in-out;
+}
+
+.gallery .card-image.is-active {
+   opacity: 1;
 }
 
 .gallery-items {
@@ -53,4 +67,50 @@
    height: 1px;
    transform: translateX(-50%);
    background-color: var(--color-primary-light);
+   animation: name duration timing-function delay iteration-count direction fill-mode;
+   animation: grow 0.25s linear;
+}
+
+@keyframes grow {
+   0% {
+      width: 1rem;
+   }
+
+   100% {
+      width: 3rem;
+   }
+}
+
+.gallery-content > p {
+   max-width: 485px;
+   margin-inline: auto;
+}
+
+@media (min-width: 540px) {
+   .gallery {
+      margin: 5rem 0 7.5rem;
+   }
+
+   .gallery-content {
+      max-width: 700px;
+   }
+
+   .gallery-image-container {
+      min-height: clamp(300px, 57vw, 370px);
+   }
+
+   .gallery-content > h3 {
+      margin: 3.25rem auto 1.5rem;
+   }
+
+   .gallery-content > p {
+      margin-bottom: 3.5rem;
+   }
+}
+
+@media (min-width: 580px) {
+   .gallery-items {
+      flex-direction: row;
+      justify-content: space-between;
+   }
 }

@@ -1,25 +1,3 @@
-import { makeImage } from "/src/components/shared/picture.js";
-import {
-   familyGatheringDesktop,
-   familyGatheringDesktop2x,
-   familyGatheringTablet,
-   familyGatheringTablet2x,
-   familyGatheringMobile,
-   familyGatheringMobile2x,
-   specialEventsDesktop,
-   specialEventsDesktop2x,
-   specialEventsTablet,
-   specialEventsTablet2x,
-   specialEventsMobile,
-   specialEventsMobile2x,
-   socialEventsDesktop,
-   socialEventsDesktop2x,
-   socialEventsTablet,
-   socialEventsTablet2x,
-   socialEventsMobile,
-   socialEventsMobile2x
-} from "/src/images";
-
 export function changeGallery(event) {
    if (!event.target.classList.contains("active")) {
       const items = document.querySelectorAll(".gallery-item");
@@ -37,53 +15,29 @@ export function changeGallery(event) {
       const galleryText = document.querySelector("#gallery-text");
       const galleryItem = event.target.dataset.item;
 
-      if (galleryItem === "1") {
-         galleryImage.innerHTML = makeImage(
-            [
-               familyGatheringMobile,
-               familyGatheringMobile2x,
-               familyGatheringTablet,
-               familyGatheringTablet2x,
-               familyGatheringDesktop,
-               familyGatheringDesktop2x
-            ],
-            "Family Gathering"
-         ).innerHTML;
+      galleryImage.children[galleryItem].lastElementChild.classList.add("is-active");
 
+      Array.from(galleryImage.children).forEach((image, index) => {
+         if (image.lastElementChild.classList.contains("is-active")) {
+            image.lastElementChild.classList.remove("is-active");
+         }
+
+         if (index == galleryItem) {
+            image.lastElementChild.classList.add("is-active");
+         }
+      });
+
+      if (galleryItem === "0") {
          galleryHeading.textContent = "Family Gathering";
          galleryText.textContent = "We love catering for entire families. So please bring everyone along for a special meal with your loved ones. We’ll provide a memorable experience for all.";
       }
 
-      if (galleryItem === "2") {
-         galleryImage.innerHTML = makeImage(
-            [
-               specialEventsMobile,
-               specialEventsMobile2x,
-               specialEventsTablet,
-               specialEventsTablet2x,
-               specialEventsDesktop,
-               specialEventsDesktop2x
-            ],
-            "Special Events"
-         ).innerHTML;
-
+      if (galleryItem === "1") {
          galleryHeading.textContent = "Special Events";
          galleryText.textContent = "Whether it’s a romantic dinner or special date you’re celebrating with others we’ll look after you. We’ll be sure to mark your special date with an unforgettable meal.";
       }
 
-      if (galleryItem === "3") {
-         galleryImage.innerHTML = makeImage(
-            [
-               socialEventsMobile,
-               socialEventsMobile2x,
-               socialEventsTablet,
-               socialEventsTablet2x,
-               socialEventsDesktop,
-               socialEventsDesktop2x
-            ],
-            "Social Events"
-         ).innerHTML;
-
+      if (galleryItem === "2") {
          galleryHeading.textContent = "Social Events";
          galleryText.textContent = "Are you looking to have a larger social event? No problem! We’re more than happy to cater for big parties. We’ll work with you to make your event a hit with everyone.";
       }
