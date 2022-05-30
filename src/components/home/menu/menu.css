@@ -27,6 +27,10 @@
 }
 
 @media (min-width: 540px) {
+   .menu {
+      padding-bottom: 5rem;
+   }
+   
    .menu-header .card-divider {
       padding: 3rem 0 2.75rem;
    }
