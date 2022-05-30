@@ -39,6 +39,7 @@
 @media (min-width: 960px) {
    .menu {
       padding: 0;
+      padding-bottom: 6rem;
    }
 
    .menu-inner {
