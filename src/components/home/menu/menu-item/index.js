@@ -8,7 +8,7 @@ export const MenuItem = ((images, alt, heading, text) => {
    // create menu item image
    const imageContainer = document.createElement("div");
    imageContainer.classList.add("menu-item-image-container");
-   const image = makeImage(images, alt, "menu-item-image");
+   const image = makeImage(images, alt, ["menu-item-image"]);
    imageContainer.append(image);
 
    // create menu item heading
