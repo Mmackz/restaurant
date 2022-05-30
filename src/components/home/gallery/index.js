@@ -74,5 +74,19 @@ export const Gallery = (() => {
    galleryContent.prepend(galleryItems);
    section.appendChild(galleryContent);
 
+   // insert decoration elements
+   const patternTopRight = document.createElement("img");
+   patternTopRight.src = images.patternCurveTopRight;
+   patternTopRight.alt = "Background Pattern";
+   patternTopRight.classList.add("pattern", "pattern-curve", "pattern-curve-top-right", "gallery-pattern-curve");
+
+   const patternLine = document.createElement("img");
+   patternLine.src = images.patternLines;
+   patternLine.alt = "Foreground Line Pattern";
+   patternLine.classList.add("pattern", "pattern-lines","gallery-pattern-lines");
+         
+   imageContainer.append(patternLine);
+   section.append(patternTopRight);
+
    return section;
 })();
