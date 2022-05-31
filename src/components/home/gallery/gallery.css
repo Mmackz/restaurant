@@ -101,7 +101,8 @@
 
 @media (min-width: 540px) {
    .gallery {
-      margin: 5rem 0 7.5rem;
+      margin-top: clamp(5rem, 15vw, 7.5rem);
+      margin-bottom: 7.5rem;
    }
 
    .gallery-content {
@@ -118,6 +119,10 @@
 
    .gallery-content > p {
       margin-bottom: 3.5rem;
+   }
+
+   .gallery-pattern-curve {
+      top: clamp(-7.5rem, -15vw, -5rem);
    }
 }
 
