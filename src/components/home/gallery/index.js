@@ -7,6 +7,10 @@ export const Gallery = (() => {
    const section = document.createElement("section");
    section.classList.add("gallery");
 
+   // create inner container
+   const container = document.createElement("div");
+   container.classList.add("gallery-inner");
+
    // create a container for the gallery images
    const imageContainer = document.createElement("div");
    imageContainer.setAttribute("id", "gallery-image");
@@ -50,7 +54,7 @@ export const Gallery = (() => {
       )
    );
 
-   section.appendChild(imageContainer);
+   container.appendChild(imageContainer);
 
    // create list of choices for gallery images
    const galleryItems = document.createElement("ul");
@@ -72,7 +76,7 @@ export const Gallery = (() => {
    `;
 
    galleryContent.prepend(galleryItems);
-   section.appendChild(galleryContent);
+   container.appendChild(galleryContent);
 
    // insert decoration elements
    const patternTopRight = document.createElement("img");
@@ -86,7 +90,8 @@ export const Gallery = (() => {
    patternLine.classList.add("pattern", "pattern-lines","gallery-pattern-lines");
          
    imageContainer.append(patternLine);
-   section.append(patternTopRight);
+   container.append(patternTopRight);
+   section.appendChild(container);
 
    return section;
 })();
