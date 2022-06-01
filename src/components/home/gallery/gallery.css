@@ -1,5 +1,4 @@
 .gallery {
-   position: relative;
    margin-top: 5rem;
    margin-bottom: 8rem;
 }
@@ -15,6 +14,10 @@
 
 .gallery-content > .card-heading {
    max-width: max-content;
+}
+
+.gallery-inner {
+   position: relative;
 }
 
 .gallery-image-container {
@@ -148,7 +151,9 @@
       flex-direction: column;
       align-items: flex-start;
       margin-top: 1.25rem;
+      margin-left: 2rem;
       padding: 0;
+      max-width: 540px;
    }
 
    .gallery-items {
@@ -166,6 +171,14 @@
       margin-inline: 0;
    }
 
+   .gallery-content .card-text {
+      max-height: 5.625rem;
+   }
+
+   .gallery-image-container {
+      margin: 0;
+   }
+
    .gallery .card-image {
       margin: 0;
       width: clamp(400px, 40vw, 540px);
@@ -178,9 +191,14 @@
 
    .gallery-item.active::after {
       width: clamp(4rem, 6.5vw, 5.925rem);
-      left: calc(-5.925rem - clamp(1rem, 2.75vw, 2.5rem));
-      bottom: 50%;
+      left: calc(-5rem - clamp(1rem, 2.75vw, 2.5rem));
+      height: 0.8px;
+      bottom: 55%;
       transform: translate(0, 0);
       z-index: -1;
+   }
+
+   .gallery-pattern-lines {
+      left: 0%;
    }
 }
