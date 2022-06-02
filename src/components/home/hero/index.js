@@ -1,4 +1,5 @@
 import "./hero.css";
+import { makeImage } from "/src/components/shared/makeImage";
 import {
    heroBgDesktop,
    heroBgDesktop2x,
@@ -15,22 +16,15 @@ export const Hero = (() => {
    section.classList.add("hero");
 
    // add responsive image for background
-   const background = document.createElement("picture");
-   background.innerHTML = `
-      <source
-         media="(max-width: 539.98px)"
-         srcset="${heroBgMobile} 1x, ${heroBgMobile2x} 2x"
-      />
-      <source
-         media="(max-width: 959.98px)"
-         srcset="${heroBgTablet} 1x, ${heroBgTablet2x} 2x"
-      />
-      <source
-         media="(min-width: 960px)"
-         srcset="${heroBgDesktop} 1x, ${heroBgDesktop2x} 2x"
-      />
-      <img class="hero-image" src="${heroBgDesktop}" alt="Hero image" width="100%" />
-   `;
+   const background = makeImage([
+      heroBgMobile,
+      heroBgMobile2x,
+      heroBgTablet,
+      heroBgTablet2x,
+      heroBgDesktop,
+      heroBgDesktop2x
+   ], "Pasta dish",
+   ["hero-image"]);
    section.append(background);
 
    // add hero content
