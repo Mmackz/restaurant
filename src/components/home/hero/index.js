@@ -16,15 +16,18 @@ export const Hero = (() => {
    section.classList.add("hero");
 
    // add responsive image for background
-   const background = makeImage([
-      heroBgMobile,
-      heroBgMobile2x,
-      heroBgTablet,
-      heroBgTablet2x,
-      heroBgDesktop,
-      heroBgDesktop2x
-   ], "Pasta dish",
-   ["hero-image"]);
+   const background = makeImage(
+      [
+         heroBgMobile,
+         heroBgMobile2x,
+         heroBgTablet,
+         heroBgTablet2x,
+         heroBgDesktop,
+         heroBgDesktop2x
+      ],
+      "Pasta dish",
+      ["hero-image"]
+   );
    section.append(background);
 
    // add hero content
