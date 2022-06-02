@@ -2,6 +2,7 @@ import { Hero } from "./hero";
 import { Info } from "./info";
 import { Menu } from "./menu";
 import { Gallery } from "./gallery";
+import { Cta } from "./cta";
 
 export default (() => {
    const main = document.createElement("main");
@@ -9,5 +10,6 @@ export default (() => {
    main.appendChild(Info);
    main.appendChild(Menu);
    main.appendChild(Gallery);
+   main.appendChild(Cta);
    return main;
 })();

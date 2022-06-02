@@ -1,5 +1,5 @@
 import "./menu-item.css";
-import { makeImage } from "/src/components/shared/picture.js";
+import { makeImage } from "/src/components/shared/makeImage";
 
 export const MenuItem = ((images, alt, heading, text) => {
    const menuItem = document.createElement("div");

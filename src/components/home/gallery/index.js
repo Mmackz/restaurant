@@ -1,5 +1,5 @@
 import "./gallery.css";
-import { makeImage } from "/src/components/shared/picture";
+import { makeImage } from "/src/components/shared/makeImage";
 import * as images from "/src/images";
 
 export const Gallery = (() => {

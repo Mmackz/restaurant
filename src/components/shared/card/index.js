@@ -2,7 +2,7 @@ import "./card.css";
 import { patternDivide } from "/src/images";
 
 // card component
-import { makeImage } from "../picture";
+import { makeImage } from "../makeImage";
 
 export const Card = (images, alt, heading, text, divider = true) => {
    // create  card
