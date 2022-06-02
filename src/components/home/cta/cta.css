@@ -25,6 +25,11 @@
    z-index: -1;
 }
 
+.cta-heading {
+   max-width: 18rem;
+   margin: 0 auto;
+}
+
 @media (min-width: 540px) {
    .cta-inner {
       padding: 4rem 1.5rem 4.5rem;
@@ -32,6 +37,11 @@
 
    .cta-image {
       object-position: right;
+   }
+
+   .cta-heading {
+      max-width: none;
+      margin: 0;
    }
 }
 

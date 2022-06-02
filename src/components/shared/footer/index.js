@@ -4,12 +4,17 @@ import { logo } from "/src/images";
 export const Footer = (() => {
    const footer = document.createElement("footer");
    footer.classList.add("footer");
+
+   // create inner container
+   const inner = document.createElement("div");
+   inner.classList.add("footer-inner");
+   footer.append(inner);
    
    // add logo
    const logoContainer = document.createElement("div");
    logoContainer.classList.add("logo", "footer-logo");
    logoContainer.innerHTML = `<img src="${logo}" alt="Logo" />`;
-   footer.append(logoContainer);
+   inner.append(logoContainer);
 
    // add container for text content
    const content = document.createElement("div");
@@ -34,7 +39,7 @@ export const Footer = (() => {
    `;
 
    content.append(address, openingTimes);
-   footer.append(content);
+   inner.append(content);
 
    return footer;
 })();
