@@ -17,7 +17,7 @@ import {
    patternCurveTopLeft,
    patternCurveTopRight,
    patternLines
-} from "/src/images";
+} from "../images";
 
 export const Info = (() => {
    // create info section

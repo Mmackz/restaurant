@@ -1,5 +1,5 @@
 import "./footer.css";
-import { logo } from "/src/images";
+import { logo } from "../../home/images";
 
 export const Footer = (() => {
    const footer = document.createElement("footer");

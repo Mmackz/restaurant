@@ -14,7 +14,7 @@ import {
    salmonDesktopTablet2x,
    salmonMobile,
    salmonMobile2x
-} from "/src/images";
+} from "../images";
 
 export const Menu = (() => {
    // create menu section

@@ -7,7 +7,7 @@ import {
    readyBgTablet2x,
    readyBgMobile,
    readyBgMobile2x
-} from "/src/images";
+} from "../images";
 
 export const Cta = (() => {
    // create the cta section

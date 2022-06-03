@@ -1,6 +1,6 @@
 import "./gallery.css";
 import { makeImage } from "/src/components/shared/makeImage";
-import * as images from "/src/images";
+import * as images from "../images";
 
 export const Gallery = (() => {
    // create the gallery section

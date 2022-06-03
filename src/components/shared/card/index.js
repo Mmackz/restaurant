@@ -1,5 +1,5 @@
 import "./card.css";
-import { patternDivide } from "/src/images";
+import { patternDivide } from "../../home/images";
 
 // card component
 import { makeImage } from "../makeImage";

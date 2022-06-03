@@ -8,7 +8,7 @@ import {
    heroBgMobile,
    heroBgMobile2x,
    logo
-} from "/src/images";
+} from "../images";
 
 export const Hero = (() => {
    // create hero section
