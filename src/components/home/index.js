@@ -12,6 +12,6 @@ export default (() => {
    main.appendChild(Menu);
    main.appendChild(Gallery);
    main.appendChild(Cta);
-   main.appendChild(Footer);
+   main.appendChild(Footer());
    return main;
 })();

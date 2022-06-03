@@ -1,7 +1,7 @@
 import "./footer.css";
 import { logo } from "../../home/images";
 
-export const Footer = (() => {
+export const Footer = () => {
    const footer = document.createElement("footer");
    footer.classList.add("footer");
 
@@ -9,7 +9,7 @@ export const Footer = (() => {
    const inner = document.createElement("div");
    inner.classList.add("footer-inner");
    footer.append(inner);
-   
+
    // add logo
    const logoContainer = document.createElement("div");
    logoContainer.classList.add("logo", "footer-logo");
@@ -42,4 +42,4 @@ export const Footer = (() => {
    inner.append(content);
 
    return footer;
-})();
+};
