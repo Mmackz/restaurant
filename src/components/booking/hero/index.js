@@ -1,6 +1,6 @@
 import "./hero.css";
 import { makeImage } from "/src/components/shared/makeImage";
-import { logo } from "../../home/images";
+import { logo, patternCurveBottomRight } from "../../home/images";
 import {
    BgDesktop,
    BgDesktop2x,
@@ -44,7 +44,19 @@ export const Hero = (() => {
       <button class="button button-dark booking-button heading-s">Reserve Place</button>
    `;
    container.append(content);
-
    section.append(container);
+
+   // attach blank white area
+   const whiteArea = document.createElement("div");
+   whiteArea.classList.add("booking-white-area");
+   section.append(whiteArea);
+
+   // add curve pattern
+   const patternBottomRight = document.createElement("img");
+   patternBottomRight.src = patternCurveBottomRight;
+   patternBottomRight.alt = "Background Pattern";
+   patternBottomRight.classList.add("pattern", "pattern-curve", "pattern-curve-bottom-right");
+   whiteArea.append(patternBottomRight);
+   
    return section;
 })();
