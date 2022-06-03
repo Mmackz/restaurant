@@ -9,7 +9,8 @@ import Home from "./components/home";
 import Booking from "./components/booking";
 
 // build homepage
-document.getElementById("root").append(Home);
+// document.getElementById("root").append(Home);
+document.getElementById("root").append(Booking);
 
 // event listeners
 document.querySelectorAll(".gallery-item").forEach((item) => {

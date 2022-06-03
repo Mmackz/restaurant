@@ -1,0 +1,32 @@
+.booking-hero {
+   color: var(--color-white);
+}
+
+.booking-image-container {
+   min-height: 600px;
+   position: relative;
+}
+
+.booking-image {
+   width: 100%;
+   max-height: 700px;
+   object-fit: cover;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: -1;
+}
+
+.booking-hero .hero-content {
+ padding: 0;
+}
+
+.booking-hero .hero-text {
+   max-height: 5rem;
+}
+
+.booking-button {
+   margin: 0 auto;
+   position: relative;
+   top: 0.25rem;
+}
