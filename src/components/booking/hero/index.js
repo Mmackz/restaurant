@@ -1,5 +1,6 @@
 import "./hero.css";
 import { makeImage } from "/src/components/shared/makeImage";
+import { Form } from "../form";
 import { logo, patternCurveBottomRight } from "../../home/images";
 import {
    BgDesktop,
@@ -49,6 +50,7 @@ export const Hero = (() => {
    // attach blank white area
    const whiteArea = document.createElement("div");
    whiteArea.classList.add("booking-white-area");
+   whiteArea.append(Form);
    section.append(whiteArea);
 
    // add curve pattern
