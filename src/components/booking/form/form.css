@@ -1,0 +1,82 @@
+.form {
+   display: flex;
+   flex-direction: column;
+   width: 87.2%;
+   max-width: 400px;
+   margin: 0 auto;
+   padding: clamp(1.5rem, 8.5vw, 2rem);
+   height: 36.5625rem;
+   border: 1px solid black; /* remove */
+   box-shadow: 0px 75px 120px -40px rgba(56, 66, 85, 0.55);
+}
+
+.form input,
+.booking-input {
+   font-family: var(--font-family);
+   font-weight: 400;
+   font-size: 1.25rem;
+   line-height: 1.75rem;
+   border: none;
+   /* outline: none; */
+   border-bottom: 1px solid #8e8e8e;
+   color: #8e8e8e;
+   padding: 0 0 0.875rem 1rem;
+   caret-color: var(--color-primary-light);
+   transition: border-color 0.35s ease-in-out;
+}
+
+.form label {
+   color: var(--color-primary-dark);
+   display: block;
+   margin-bottom: 0.5rem;
+   font-size: 1.25rem;
+   line-height: 1.75rem;
+   cursor: pointer;
+}
+
+.wide-input {
+   margin-bottom: 2.125rem;
+}
+
+.form-group {
+   position: relative;
+}
+
+.form-group div, /* change this */
+.form-group input {
+   width: 100%;
+   flex: 0 1 76%;
+}
+
+.input-group {
+   display: flex;
+   gap: 0.875rem;
+}
+
+.booking-input {
+   cursor: pointer;
+}
+
+div.input-l {
+   flex: 1 1 100%;
+}
+
+.flatpkr {
+   display: none;
+}
+
+.active-input input {
+   border-color: var(--color-primary-dark);
+   color: var(--color-primary-dark);
+}
+
+/* remove arrows from number inputs */
+.form input[type="number"]::-webkit-inner-spin-button,
+.form input[type="number"]::-webkit-outer-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
