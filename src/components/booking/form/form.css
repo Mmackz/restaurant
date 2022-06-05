@@ -17,9 +17,9 @@
    font-size: 1.25rem;
    line-height: 1.75rem;
    border: none;
-   /* outline: none; */
+   outline: none;
    border-bottom: 1px solid #8e8e8e;
-   color: #8e8e8e;
+   color: var(--color-primary-dark);
    padding: 0 0 0.875rem 1rem;
    caret-color: var(--color-primary-light);
    transition: border-color 0.35s ease-in-out;
@@ -65,7 +65,7 @@ div.input-l {
    display: none;
 }
 
-.active-input input {
+input.active-input {
    border-color: var(--color-primary-dark);
    color: var(--color-primary-dark);
 }

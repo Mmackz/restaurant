@@ -12,7 +12,17 @@ export const Form = (() => {
    nameInput.type = "text";
    nameInput.name = "name";
    nameInput.placeholder = "Name";
+   nameInput.setAttribute("required", "");
+   nameInput.setAttribute("spellcheck", "false");
    form.append(nameInput);
+
+   nameInput.addEventListener("input", (e) => {
+      if (e.target.value.length > 0) {
+         e.target.classList.add("active-input");
+      } else {
+         e.target.classList.remove("active-input");
+      }
+   });
 
    // create email input
    const emailInput = document.createElement("input");
@@ -20,7 +30,16 @@ export const Form = (() => {
    emailInput.type = "email";
    emailInput.name = "email";
    emailInput.placeholder = "Email";
+   nameInput.setAttribute("spellcheck", "false");
    form.append(emailInput);
+
+   emailInput.addEventListener("input", (e) => {
+      if (e.target.value.length > 0) {
+         e.target.classList.add("active-input");
+      } else {
+         e.target.classList.remove("active-input");
+      }
+   });
 
    // create date input
    const dateFormGroup = document.createElement("div");
@@ -122,7 +141,9 @@ export const Form = (() => {
       dayEl.value = `${date.getDate()}`.padStart(2, "0");
       yearEl.value = date.getFullYear();
 
-      dateFormGroup.classList.add("active-input");
+      monthEl.classList.add("active-input");
+      dayEl.classList.add("active-input");
+      yearEl.classList.add("active-input");
    }
 
    function showCalendar() {
