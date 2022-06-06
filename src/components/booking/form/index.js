@@ -1,6 +1,7 @@
 import "./form.css";
 import { DateInputs } from "./date-inputs";
 import { TimeInputs } from "./time-inputs";
+import { GuestsInput } from "./guests-input";
 
 export const Form = (() => {
    const form = document.createElement("form");
@@ -46,6 +47,17 @@ export const Form = (() => {
 
    // append time inputs
    form.append(TimeInputs);
+
+   // append guests input
+   form.append(GuestsInput);
+
+   // create button to submit reservation form
+   const submitBtn = document.createElement("button");
+   submitBtn.classList.add("button", "button-light", "heading-s");
+   submitBtn.setAttribute("type", "button");
+   submitBtn.textContent = "MAKE RESERVATION";
+
+   form.append(submitBtn);
 
    return form;
 })();

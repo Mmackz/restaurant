@@ -1,13 +1,17 @@
 .form {
+   position: absolute;
+   top: -8.5rem;
+   left: 50%;
+   transform: translateX(-50%);
+   background: var(--color-white);
    display: flex;
    flex-direction: column;
    width: 87.2%;
    max-width: 400px;
    margin: 0 auto;
    padding: clamp(1.5rem, 8.5vw, 2rem);
-   height: 36.5625rem;
-   border: 1px solid black; /* remove */
-   box-shadow: 0px 75px 120px -40px rgba(56, 66, 85, 0.55);
+   min-height: 36.5625rem;
+   box-shadow: 0px 55px 90px -35px rgba(56, 66, 85, 0.5);
 }
 
 .form input,
@@ -28,7 +32,7 @@
 .form label {
    color: var(--color-primary-dark);
    display: block;
-   margin-bottom: 0.5rem;
+   margin-bottom: 0.75rem;
    font-size: 1.25rem;
    line-height: 1.75rem;
    cursor: pointer;
@@ -42,7 +46,7 @@
    position: relative;
 }
 
-.form-group div, /* change this */
+.form-group div,
 .form-group input {
    width: 100%;
    flex: 0 1 76%;
@@ -62,18 +66,26 @@
    cursor: pointer;
 }
 
+input.input-l,
 div.input-l {
-   flex: 1 1 100%;
+   flex: 1 1 90%;
+}
+
+.arrow-container {
+   max-width: 2rem;
+   margin: auto;
 }
 
 .arrow {
    width: 1rem;
-   margin-left: 0.75rem;
+   height: 0.5rem;
+   margin-bottom: 0.25rem;
+   transform: scale(1.2) translateX(3px);
    transition: all 0.275s ease-in-out;
 }
 
 .active .arrow {
-   transform: rotate(180deg);
+   transform: scale(1.2) translateX(3px) rotate(180deg);
 }
 
 .ampm-dropdown {
@@ -82,6 +94,7 @@ div.input-l {
    left: 0;
    color: var(--color-primary-dark);
    font-family: var(--font-family);
+   background: var(--color-white);
    font-weight: 400;
    font-size: 1.25rem;
    line-height: 1.75rem;
@@ -133,6 +146,8 @@ div.input-l {
 
 .am-pm-input {
    position: relative;
+   width: 100%;
+   display: flex;
 }
 
 .flatpkr {
@@ -153,4 +168,46 @@ input.active-input {
 
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+.guests {
+   width: fit-content;
+   font-weight: 700;
+   letter-spacing: -0.25px;
+}
+
+.guests-input {
+   display: flex;
+   justify-content: space-between;
+   margin-top: 2.125rem;
+   cursor: auto;
+}
+
+.guests-input-btn {
+   background: transparent;
+   border: none;
+   padding: 0.5rem 0.25rem;
+   cursor: pointer;
+}
+
+.guests-input-btn:hover {
+   transform: scale(1.05);
+}
+
+.minus {
+   transform: translateY(-2.5px) scale(1.08);
+}
+
+.minus:hover {
+   transform: translateY(-2.5px) scale(1.15);
+}
+
+.guests-input-btn:last-of-type {
+   margin-right: 1rem;
+}
+
+.form .button {
+   margin-top: 2rem;
+   padding-right: 0;
+   padding-left: 0;
 }

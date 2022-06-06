@@ -7,7 +7,6 @@ export const TimeInputs = (() => {
    timeFormGroup.classList.add("form-group");
 
    const timeLabel = document.createElement("label");
-   timeLabel.classList.add("form-label");
    timeLabel.setAttribute("for", "hour");
    timeLabel.textContent = "Pick a time";
 
@@ -66,7 +65,7 @@ export const TimeInputs = (() => {
 
    // create am/pm input
    const amPmInput = document.createElement("div");
-   amPmInput.classList.add("booking-input", "am-pm-input");
+   amPmInput.classList.add("booking-input", "am-pm-input", "input-l");
    amPmInput.setAttribute("aria-label", "am-pm");
    amPmInput.setAttribute("tabindex", "0");
 
@@ -75,10 +74,15 @@ export const TimeInputs = (() => {
    amPm.setAttribute("id", "am-pm");
    amPm.textContent = "AM";
 
+   const arrowContainer = document.createElement("div");
+   arrowContainer.classList.add("arrow-container");
+
    const arrow = document.createElement("img");
    arrow.src = iconArrow;
    arrow.alt = "arrow";
    arrow.classList.add("arrow");
+
+   arrowContainer.appendChild(arrow);
 
    // create dropdown menu for am/pm
    const amPmDropdown = document.createElement("div");
@@ -104,6 +108,15 @@ export const TimeInputs = (() => {
    dropdownList.append(am, pm);
    amPmDropdown.append(dropdownList);
 
+   // append inputs to input group
+   amPmInput.append(amPm, arrowContainer, amPmDropdown);
+   inputGroup.append(hourInput, minuteInput, amPmInput);
+   timeFormGroup.append(timeLabel, inputGroup);
+
+   // event listener for am/pm
+   amPmInput.addEventListener("focusin", toggleAmPmMenu);
+   amPmInput.addEventListener("focusout", toggleAmPmMenu);
+
    [am, pm].forEach((item) => {
       item.addEventListener("click", (e) => {
          if (!e.target.children[0].classList.contains("active")) {
@@ -122,16 +135,7 @@ export const TimeInputs = (() => {
          }
       });
    });
-
-   // append inputs to input group
-   amPmInput.append(amPm, arrow, amPmDropdown);
-   inputGroup.append(hourInput, minuteInput, amPmInput);
-   timeFormGroup.append(timeLabel, inputGroup);
-
-   // event listener for am/pm
-   amPmInput.addEventListener("focusin", toggleAmPmMenu);
-   amPmInput.addEventListener("focusout", toggleAmPmMenu);
-
+   
    function toggleAmPmMenu() {
       amPmDropdown.classList.toggle("hidden");
       amPmInput.classList.toggle("active");
