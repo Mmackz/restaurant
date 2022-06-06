@@ -27,7 +27,12 @@
 
 .booking-hero .hero-text {
    max-height: 5rem;
-   width: 77.5%;
+   width: 100%;
+   width: min(21rem, 100%);
+}
+
+.booking-hero .hero-heading {
+   margin-top: 2.75rem;
 }
 
 .booking-button {
@@ -38,6 +43,7 @@
 
 .booking-white-area {
    height: 33.375rem;
+   position: relative;
 }
 
 .booking-hero .pattern {

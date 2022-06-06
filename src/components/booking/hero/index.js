@@ -16,36 +16,36 @@ export const Hero = (() => {
    const section = document.createElement("section");
    section.classList.add("booking-hero");
 
-   // // add responsive image for background
-   // const container = document.createElement("div");
-   // container.classList.add("booking-image-container");
+   // add responsive image for background
+   const container = document.createElement("div");
+   container.classList.add("booking-image-container");
 
-   // const background = makeImage(
-   //    [BgMobile, BgMobile2x, BgTablet, BgTablet2x, BgDesktop, BgDesktop2x],
-   //    "Pasta dish",
-   //    ["booking-image"]
-   // );
-   // container.append(background);
+   const background = makeImage(
+      [BgMobile, BgMobile2x, BgTablet, BgTablet2x, BgDesktop, BgDesktop2x],
+      "Pasta dish",
+      ["booking-image"]
+   );
+   container.append(background);
 
-   // // add hero content
-   // const content = document.createElement("div");
-   // content.classList.add("hero-content");
+   // add hero content
+   const content = document.createElement("div");
+   content.classList.add("hero-content");
 
-   // // add logo
-   // const logoContainer = document.createElement("div");
-   // logoContainer.classList.add("logo");
-   // logoContainer.innerHTML = `<img src="${logo}" alt="Logo" />`;
-   // content.append(logoContainer);
+   // add logo
+   const logoContainer = document.createElement("div");
+   logoContainer.classList.add("logo");
+   logoContainer.innerHTML = `<img src="${logo}" alt="Logo" />`;
+   content.append(logoContainer);
 
-   // content.innerHTML += `
-   //    <h1 class="heading-xl hero-heading">Reservations</h1>
-   //    <p class="text-lg hero-text">
-   //       We can’t wait to host you. If you have any special requirements please feel free to call on the phone number below. We’ll be happy to accommodate you.
-   //    </p>
-   //    <button class="button button-dark booking-button heading-s">Reserve Place</button>
-   // `;
-   // container.append(content);
-   // section.append(container);
+   content.innerHTML += `
+      <h1 class="heading-xl hero-heading">Reservations</h1>
+      <p class="text-lg hero-text">
+         We can’t wait to host you. If you have any special requirements please feel free to call on the phone number below. We’ll be happy to accommodate you.
+      </p>
+      <button class="button button-dark booking-button heading-s">Reserve Place</button>
+   `;
+   container.append(content);
+   section.append(container);
 
    // attach blank white area
    const whiteArea = document.createElement("div");
@@ -54,11 +54,11 @@ export const Hero = (() => {
    section.append(whiteArea);
 
    // add curve pattern
-   // const patternBottomRight = document.createElement("img");
-   // patternBottomRight.src = patternCurveBottomRight;
-   // patternBottomRight.alt = "Background Pattern";
-   // patternBottomRight.classList.add("pattern", "pattern-curve", "pattern-curve-bottom-right");
-   // whiteArea.append(patternBottomRight);
+   const patternBottomRight = document.createElement("img");
+   patternBottomRight.src = patternCurveBottomRight;
+   patternBottomRight.alt = "Background Pattern";
+   patternBottomRight.classList.add("pattern", "pattern-curve", "pattern-curve-bottom-right");
+   whiteArea.append(patternBottomRight);
    
    return section;
 })();
