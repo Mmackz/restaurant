@@ -95,7 +95,6 @@ export const DateInputs = (() => {
    dateFormGroup.append(dateLabel, inputGroup, dateInput);
 
    function changeDate(selectedDates) {
-      console.log(selectedDates);
       const date = new Date(selectedDates);
       const monthEl = document.getElementById("month");
       const dayEl = document.getElementById("day");
