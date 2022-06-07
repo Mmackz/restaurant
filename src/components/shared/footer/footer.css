@@ -36,6 +36,10 @@
       padding: 4rem 2.5rem;
    }
 
+   .footer p {
+      text-align: left;
+   }
+
    .footer-logo {
       position: absolute;
       top: 0;
