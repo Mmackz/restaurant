@@ -7,6 +7,7 @@ export const TimeInputs = (() => {
    timeFormGroup.classList.add("form-group");
 
    const timeLabel = document.createElement("label");
+   timeLabel.classList.add("form-label");
    timeLabel.setAttribute("for", "hour");
    timeLabel.textContent = "Pick a time";
 
