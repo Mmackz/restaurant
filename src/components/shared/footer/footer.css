@@ -47,7 +47,10 @@
    }
 
    .footer-content {
+      width: fit-content;
       margin-top: 0;
+      margin: 0 auto;
+      transform: translateX(1.25rem);
    }
 }
 
@@ -67,6 +70,7 @@
       flex-direction: row;
       justify-content: space-evenly;
       flex-grow: 1;
+      transform: unset;
    }
 
    .footer-logo {
