@@ -2,6 +2,7 @@ import "./form.css";
 import { DateInputs } from "./date-inputs";
 import { TimeInputs } from "./time-inputs";
 import { GuestsInput } from "./guests-input";
+import { patternLines } from "../../home/images";
 
 export const Form = (() => {
    const form = document.createElement("form");
@@ -58,6 +59,16 @@ export const Form = (() => {
    submitBtn.textContent = "MAKE RESERVATION";
 
    form.append(submitBtn);
+
+   // add decoration to form
+   const decoration = document.createElement("div");
+   decoration.classList.add("decoration");
+   const patternLine = document.createElement("img");
+   patternLine.src = patternLines;
+   patternLine.alt = "Foreground Line Pattern";
+   patternLine.classList.add("pattern", "pattern-lines");
+   decoration.append(patternLine);
+   form.append(decoration);
 
    return form;
 })();
