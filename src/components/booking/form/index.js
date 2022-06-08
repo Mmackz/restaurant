@@ -32,7 +32,7 @@ export const Form = (() => {
    emailInput.type = "email";
    emailInput.name = "email";
    emailInput.placeholder = "Email";
-   nameInput.setAttribute("spellcheck", "false");
+   emailInput.setAttribute("spellcheck", "false");
    form.append(emailInput);
 
    emailInput.addEventListener("input", (e) => {
@@ -72,3 +72,15 @@ export const Form = (() => {
 
    return form;
 })();
+
+
+// BUGS/TODO
+/* 
+  - Close dropdown when arrow is clicked again
+  - Escape key should close dropdown
+  - Validate the form and display error messages
+  - Button should center form and set focus on first input
+  - Animate presses of +/- button ??MAYBE??
+  - Fine-tune CSS to look like figma design
+  - clamp max-width (1180px, 80vw, 1280px)
+*/
