@@ -46,7 +46,7 @@
    position: relative;
 }
 
-.form-group div,
+.form-group > div,
 .form-group input {
    width: 100%;
    flex: 0 1 76%;
@@ -152,6 +152,10 @@ div.input-l {
 
 .flatpkr {
    display: none;
+}
+
+.flatpickr-calendar {
+   right: 0;
 }
 
 input.active-input {
