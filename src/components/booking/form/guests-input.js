@@ -12,7 +12,7 @@ export const GuestsInput = (() => {
    
       const guests = document.createElement("div");
       guests.classList.add("guests");
-      guest.setAttribute("aria-label", "number of guests");
+      guests.setAttribute("aria-label", "number of guests");
    
       const guestsNumber = document.createElement("span");
       guestsNumber.setAttribute("id", "guests");
