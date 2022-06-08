@@ -86,6 +86,7 @@ export const TimeInputs = (() => {
    // create dropdown menu for am/pm
    const amPmDropdown = document.createElement("div");
    amPmDropdown.classList.add("ampm-dropdown", "hidden");
+   amPmDropdown.setAttribute("aria-label", "select am-pm");
 
    amPmDropdown.addEventListener("keypress", (e) => {
       if (e.key === "Enter") {
