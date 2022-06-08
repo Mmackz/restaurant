@@ -1,5 +1,6 @@
 import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.css";
+import { makeWarning } from "./make-warning";
 
 export const DateInputs = (() => {
    // create date input
@@ -18,6 +19,7 @@ export const DateInputs = (() => {
    monthInput.classList.add("booking-input");
    monthInput.setAttribute("id", "month");
    monthInput.setAttribute("type", "number");
+   monthInput.setAttribute("name", "month");
    monthInput.setAttribute("placeholder", "MM");
    monthInput.setAttribute("aria-label", "Month");
    monthInput.setAttribute("autocomplete", "off");
@@ -42,6 +44,7 @@ export const DateInputs = (() => {
    dayInput.classList.add("booking-input");
    dayInput.setAttribute("id", "day");
    dayInput.setAttribute("type", "number");
+   dayInput.setAttribute("name", "day");
    dayInput.setAttribute("placeholder", "DD");
    dayInput.setAttribute("aria-label", "Day");
    dayInput.setAttribute("autocomplete", "off");
@@ -66,6 +69,7 @@ export const DateInputs = (() => {
    yearInput.classList.add("booking-input", "input-l");
    yearInput.setAttribute("id", "year");
    yearInput.setAttribute("type", "number");
+   yearInput.setAttribute("name", "year");
    yearInput.setAttribute("placeholder", "YYYY");
    yearInput.setAttribute("aria-label", "Year");
    yearInput.setAttribute("autocomplete", "off");
@@ -92,7 +96,7 @@ export const DateInputs = (() => {
    dateInput.type = "text";
    dateInput.name = "date";
 
-   dateFormGroup.append(dateLabel, inputGroup, dateInput);
+   dateFormGroup.append(dateLabel, inputGroup, dateInput, makeWarning("This field is incomplete"));
 
    function changeDate(selectedDates) {
       const date = new Date(selectedDates);

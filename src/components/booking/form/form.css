@@ -40,20 +40,23 @@
 
 .wide-input {
    margin-bottom: 2.125rem;
+   width: 100%;
 }
 
 .form-group {
    position: relative;
+   margin-bottom: 1.125rem;
+}
+
+.form-group:not(.date-form-group) {
+   padding-bottom: 1rem;
+   margin-bottom: 1.125rem;
 }
 
 .form-group > div,
 .form-group input {
    width: 100%;
    flex: 0 1 76%;
-}
-
-.date-form-group {
-   margin-bottom: 1.125rem;
 }
 
 .input-group {
@@ -183,7 +186,7 @@ input[type=number] {
 .guests-input {
    display: flex;
    justify-content: space-between;
-   margin-top: 2.125rem;
+   margin-top: 0.125rem;
    cursor: auto;
 }
 
@@ -214,6 +217,30 @@ input[type=number] {
    margin-top: 2rem;
    padding-right: 0;
    padding-left: 0;
+}
+
+.input-container {
+   position: relative;
+}
+
+.validation-warning {
+   position: absolute;
+   bottom: 1rem;
+   left: 1rem;
+}
+
+.form-group .validation-warning {
+   bottom: 0.85rem;
+   left: 0;
+}
+
+.warning-text {
+   color: #b54949;
+   font-size: 0.625rem;
+   font-weight: 500;
+   line-height: 0.575rem;
+   letter-spacing: -0.13px;
+   width: max-content;
 }
 
 @media (min-width: 540px) {

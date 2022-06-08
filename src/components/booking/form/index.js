@@ -3,20 +3,27 @@ import { DateInputs } from "./date-inputs";
 import { TimeInputs } from "./time-inputs";
 import { GuestsInput } from "./guests-input";
 import { patternLines } from "../../home/images";
+import { makeWarning } from "./make-warning";
 
 export const Form = (() => {
    const form = document.createElement("form");
    form.classList.add("form");
 
    // create name input
+   const nameInputContainer = document.createElement("div");
+   nameInputContainer.classList.add("input-container");
+
+   // add validation warning
    const nameInput = document.createElement("input");
    nameInput.classList.add("wide-input");
    nameInput.type = "text";
    nameInput.name = "name";
    nameInput.placeholder = "Name";
-   nameInput.setAttribute("required", "");
+   nameInput.setAttribute("autocomplete", "off");
    nameInput.setAttribute("spellcheck", "false");
-   form.append(nameInput);
+
+   nameInputContainer.append(makeWarning("This field is required"), nameInput);
+   form.append(nameInputContainer);
 
    nameInput.addEventListener("input", (e) => {
       if (e.target.value.length > 0) {
@@ -27,13 +34,18 @@ export const Form = (() => {
    });
 
    // create email input
+   const emailInputContainer = document.createElement("div");
+   emailInputContainer.classList.add("input-container");
+
    const emailInput = document.createElement("input");
    emailInput.classList.add("wide-input");
    emailInput.type = "email";
    emailInput.name = "email";
    emailInput.placeholder = "Email";
+   emailInput.setAttribute("autocomplete", "off");
    emailInput.setAttribute("spellcheck", "false");
-   form.append(emailInput);
+   emailInputContainer.append(makeWarning("This field is required"), emailInput);
+   form.append(emailInputContainer);
 
    emailInput.addEventListener("input", (e) => {
       if (e.target.value.length > 0) {
@@ -55,7 +67,6 @@ export const Form = (() => {
    // create button to submit reservation form
    const submitBtn = document.createElement("button");
    submitBtn.classList.add("button", "button-light", "heading-s");
-   submitBtn.setAttribute("type", "button");
    submitBtn.textContent = "MAKE RESERVATION";
 
    form.append(submitBtn);
@@ -72,15 +83,3 @@ export const Form = (() => {
 
    return form;
 })();
-
-
-// BUGS/TODO
-/* 
-  - Close dropdown when arrow is clicked again
-  - Escape key should close dropdown
-  - Validate the form and display error messages
-  - Button should center form and set focus on first input
-  - Animate presses of +/- button ??MAYBE??
-  - Fine-tune CSS to look like figma design
-  - clamp max-width (1180px, 80vw, 1280px)
-*/

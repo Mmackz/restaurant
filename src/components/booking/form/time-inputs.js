@@ -1,5 +1,6 @@
 import iconArrow from "./icons/icon-arrow.svg";
 import iconCheck from "./icons/icon-check.svg";
+import { makeWarning } from "./make-warning";
 
 export const TimeInputs = (() => {
    // create time inputs
@@ -111,7 +112,7 @@ export const TimeInputs = (() => {
    // append inputs to input group
    amPmInput.append(amPm, arrowContainer, amPmDropdown);
    inputGroup.append(hourInput, minuteInput, amPmInput);
-   timeFormGroup.append(timeLabel, inputGroup);
+   timeFormGroup.append(timeLabel, inputGroup, makeWarning("This field is incomplete"));
 
    // event listener for am/pm
    amPmInput.addEventListener("focusin", toggleAmPmMenu);
