@@ -57,9 +57,7 @@ export const TimeInputs = (() => {
    });
 
    minuteInput.addEventListener("focusout", (e) => {
-      if (e.target.value === "0") {
-         e.target.value = "01";
-      } else if (e.target.value.length === 1) {
+      if (e.target.value.length === 1) {
          e.target.value = "0" + e.target.value;
       }
    });
