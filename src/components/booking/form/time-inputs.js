@@ -51,7 +51,7 @@ export const TimeInputs = (() => {
    minuteInput.setAttribute("max", "59");
 
    minuteInput.addEventListener("input", (e) => {
-      e.target.value = /^(0[1-9]|[1-5][0-9]|[0-5])$/.test(e.target.value)
+      e.target.value = /^(0[0-9]|[1-5][0-9]|[0-5])$/.test(e.target.value)
          ? e.target.value
          : e.target.value.slice(0, -1);
    });
