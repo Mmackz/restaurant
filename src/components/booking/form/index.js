@@ -81,5 +81,36 @@ export const Form = (() => {
    decoration.append(patternLine);
    form.append(decoration);
 
+   form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const amPm = document.getElementById("am-pm").textContent;
+      const guests = document.getElementById("guests").textContent;
+      const name = e.target.name.value;
+      const email = e.target.email.value;
+      const date = e.target.date.value;
+      const year = e.target.year.value;
+      const month = e.target.month.value;
+      const day = e.target.day.value;
+      const hour = e.target.hour.value;
+      const minute = e.target.minute.value;
+
+      if (!name) {
+         console.log("Name invalid");
+      }
+      if (!email) {
+         console.log("Email invalid");
+      }
+      if (!date) {
+         console.log("FullDate invalid");
+      }
+      if (!month || !day || !year) {
+         console.log("Date invalid");
+      }
+      if (!hour || !minute) {
+         console.log("Time invalid");
+      }
+
+   });
+
    return form;
 })();
