@@ -5,11 +5,12 @@ import { makeWarning } from "./make-warning";
 export const TimeInputs = (() => {
    // create time inputs
    const timeFormGroup = document.createElement("div");
-   timeFormGroup.classList.add("form-group");
+   timeFormGroup.classList.add("form-group", "time-form-group");
 
    const timeLabel = document.createElement("label");
    timeLabel.classList.add("form-label");
    timeLabel.setAttribute("for", "hour");
+   timeLabel.setAttribute("id", "time-label");
    timeLabel.textContent = "Pick a time";
 
    const inputGroup = document.createElement("div");
@@ -30,6 +31,7 @@ export const TimeInputs = (() => {
       e.target.value = /^((0)[1-9]|(1)[0-2]|[0-9])$/.test(e.target.value)
          ? e.target.value
          : e.target.value.slice(0, -1);
+      removeWarnings(e.target);
    });
 
    hourInput.addEventListener("focusout", (e) => {
@@ -55,6 +57,7 @@ export const TimeInputs = (() => {
       e.target.value = /^(0[0-9]|[1-5][0-9]|[0-5])$/.test(e.target.value)
          ? e.target.value
          : e.target.value.slice(0, -1);
+      removeWarnings(e.target);
    });
 
    minuteInput.addEventListener("focusout", (e) => {
@@ -140,6 +143,17 @@ export const TimeInputs = (() => {
    function toggleAmPmMenu() {
       amPmDropdown.classList.toggle("hidden");
       amPmInput.classList.toggle("active");
+   }
+
+   function removeWarnings(target) {
+      if (target.value.length > 0) {
+         target.classList.add("active-input");
+         timeLabel.classList.remove("warning");
+         hourInput.classList.remove("warning");
+         minuteInput.classList.remove("warning");
+      } else {
+         target.classList.remove("active-input");
+      }
    }
 
    return timeFormGroup;

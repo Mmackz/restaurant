@@ -48,7 +48,7 @@
    margin-bottom: 1.125rem;
 }
 
-.form-group:not(.date-form-group) {
+.time-form-group {
    padding-bottom: 1rem;
    margin-bottom: 1.125rem;
 }
@@ -227,10 +227,12 @@ input[type=number] {
    position: absolute;
    bottom: 1rem;
    left: 1rem;
+   display: none;
+   height: fit-content;
 }
 
 .form-group .validation-warning {
-   bottom: 0.85rem;
+   top: 1.5rem;
    left: 0;
 }
 
@@ -241,6 +243,53 @@ input[type=number] {
    line-height: 0.575rem;
    letter-spacing: -0.13px;
    width: max-content;
+}
+
+.form .warning {
+   color: #b54949;
+   border-color: #b54949;
+}
+
+.warning::placeholder {
+   color: #b54949;
+   opacity: 0.5;
+}
+
+.warning ~ .validation-warning {
+   display: block;
+}
+
+.toast-container {
+   position: absolute;
+   bottom: -2rem;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 20rem;
+   padding: 0.75rem;
+   border-radius: 0.5rem;
+   height: fit-content;
+   background: green;
+   opacity: 0.7;
+   z-index: 1;
+   text-align: center;
+   display: none;
+}
+
+.show-toast {
+   display: block;
+}
+
+.fade {
+   animation: fadeOut 4s 2s;
+}
+
+@keyframes fadeOut {
+   0% {
+      opacity: 0.7;
+   }
+   100% {
+      opacity: 0;
+   }
 }
 
 @media (min-width: 540px) {
@@ -263,13 +312,18 @@ input[type=number] {
       width: fit-content;
       float: left;
       position: relative;
-      top: 0.6rem;
+      top: 0.4rem;
    }
 
    .input-group {
       display: inline-flex;
       max-width: 18rem;
       float: right;
+   }
+
+   .form-group .validation-warning {
+      top: unset;
+      bottom: 1.1rem;
    }
 }
 

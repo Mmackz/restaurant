@@ -10,6 +10,7 @@ export const DateInputs = (() => {
    const dateLabel = document.createElement("label");
    dateLabel.classList.add("form-label");
    dateLabel.setAttribute("for", "date");
+   dateLabel.setAttribute("id", "date-label");
    dateLabel.textContent = "Pick a date";
 
    const inputGroup = document.createElement("div");
@@ -30,6 +31,8 @@ export const DateInputs = (() => {
       e.target.value = /^((0)[1-9]|(1)[0-2]|[0-9])$/.test(e.target.value)
          ? e.target.value
          : e.target.value.slice(0, -1);
+
+      removeWarnings(e.target);
    });
 
    monthInput.addEventListener("focusout", (e) => {
@@ -55,6 +58,7 @@ export const DateInputs = (() => {
       e.target.value = /^((0)[1-9]|[1-2][0-9]|(3)[0-1]|[0-9])$/.test(e.target.value)
          ? e.target.value
          : e.target.value.slice(0, -1);
+      removeWarnings(e.target);
    });
 
    dayInput.addEventListener("focusout", (e) => {
@@ -80,6 +84,7 @@ export const DateInputs = (() => {
       e.target.value = /^20?2?[2-5]?$/.test(e.target.value)
          ? e.target.value
          : e.target.value.slice(0, -1);
+      removeWarnings(e.target);
    });
 
    yearInput.addEventListener("focusout", (e) => {
@@ -95,6 +100,10 @@ export const DateInputs = (() => {
    dateInput.setAttribute("id", "date");
    dateInput.type = "text";
    dateInput.name = "date";
+
+   dateInput.addEventListener("input", (e) => {
+      removeWarnings(e.target);
+   })
 
    dateFormGroup.append(dateLabel, inputGroup, dateInput, makeWarning("This field is incomplete"));
 
@@ -139,6 +148,18 @@ export const DateInputs = (() => {
          window.onload = showCalendar;
       }
    });
+
+   function removeWarnings(target) {
+      if (target.value.length > 0) {
+         target.classList.add("active-input");
+         dateLabel.classList.remove("warning");
+         monthInput.classList.remove("warning");
+         dayInput.classList.remove("warning");
+         yearInput.classList.remove("warning");
+      } else {
+         target.classList.remove("active-input");
+      }
+   }
 
    return dateFormGroup;
 })();
