@@ -78,4 +78,4 @@ export const Info = (() => {
    section.append(patternTopRight, patternTopLeft);
 
    return section;
-})();
+});

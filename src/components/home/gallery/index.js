@@ -1,5 +1,6 @@
 import "./gallery.css";
 import { makeImage } from "/src/components/shared/makeImage";
+import { changeGallery } from "./changeGallery";
 import * as images from "../images";
 
 export const Gallery = (() => {
@@ -65,6 +66,11 @@ export const Gallery = (() => {
       <li class="gallery-item heading-s inactive" data-item="2">Social Events</li>
    `;
 
+   // add event listeners to change gallery items
+   galleryItems.childNodes.forEach((item) => {
+      item.addEventListener("click", changeGallery);
+   });
+
    // create a container for the gallery text content
    const galleryContent = document.createElement("div");
    galleryContent.classList.add("gallery-content", "card-content");
@@ -94,4 +100,4 @@ export const Gallery = (() => {
    section.appendChild(container);
 
    return section;
-})();
+});

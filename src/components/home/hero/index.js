@@ -51,4 +51,4 @@ export const Hero = (() => {
    section.append(content);
 
    return section;
-})();
+});

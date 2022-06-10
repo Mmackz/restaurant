@@ -122,19 +122,6 @@ export const DateInputs = (() => {
       yearEl.classList.add("active-input");
    }
 
-   function showCalendar() {
-      const inputEls = document.querySelectorAll(".date-form-group .booking-input");
-      inputEls.forEach((el) => {
-         el.addEventListener("click", () => {
-            fp.open();
-         });
-
-         el.addEventListener("focus", () => {
-            fp.open();
-         });
-      });
-   }
-
    const fp = flatpickr(dateInput, {
       static: true,
       minDate: "today",
@@ -143,10 +130,18 @@ export const DateInputs = (() => {
       appendTo: dateFormGroup,
       position: "auto right",
       positionElement: dateFormGroup,
-      onChange: changeDate,
-      onReady: function () {
-         window.onload = showCalendar;
-      }
+      onChange: changeDate
+   });
+
+   const inputEls = [yearInput, monthInput, dayInput];
+   inputEls.forEach((el) => {
+      el.addEventListener("click", () => {
+         fp.open();
+      });
+
+      el.addEventListener("focus", () => {
+         fp.open();
+      });
    });
 
    function removeWarnings(target) {

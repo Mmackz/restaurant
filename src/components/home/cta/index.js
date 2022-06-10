@@ -44,4 +44,4 @@ export const Cta = (() => {
    container.append(heading, button);
    section.append(container);
    return section;
-})();
+});

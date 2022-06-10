@@ -67,4 +67,4 @@ export const Menu = (() => {
    section.append(sectionInner);
 
    return section;
-})();
+});

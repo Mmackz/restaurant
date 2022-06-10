@@ -2,17 +2,33 @@
 import "./reset.css";
 import "./style.css";
 
-import { changeGallery } from "./components/home/gallery/changeGallery";
-
 // import components
 import Home from "./components/home";
 import Booking from "./components/booking";
 
-// build homepage
-// document.getElementById("root").append(Home);
-document.getElementById("root").append(Booking());
+const root = document.getElementById("root");
 
-// event listeners
-document.querySelectorAll(".gallery-item").forEach((item) => {
-   item.addEventListener("click", changeGallery);
-});
+// build homepage
+root.append(Home());
+setEventListeners(true);
+
+// set event listeners
+function setEventListeners(home) {
+   const logos = document.querySelectorAll(".logo");
+   logos.forEach((logo) => {
+      logo.addEventListener("click", (e) => {
+         root.replaceChild(Home(), root.lastChild);
+         setEventListeners(true);
+      });
+   });
+
+   if (home) {
+      const buttons = document.querySelectorAll(".button");
+      buttons.forEach((button) => {
+         button.addEventListener("click", (e) => {
+            root.replaceChild(Booking(), root.lastChild);
+            setEventListeners(false);
+         });
+      });
+   }
+}
