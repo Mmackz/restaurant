@@ -37,7 +37,8 @@
 .booking-button {
    margin: 0 auto;
    position: relative;
-   top: 0.25rem;
+   width: fit-content;
+   top: 0.4rem;
 }
 
 .booking-white-area {

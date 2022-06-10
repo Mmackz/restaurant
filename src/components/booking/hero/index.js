@@ -42,8 +42,24 @@ export const Hero = (() => {
       <p class="text-lg hero-text">
          We can’t wait to host you. If you have any special requirements please feel free to call on the phone number below. We’ll be happy to accommodate you.
       </p>
-      <button class="button button-dark booking-button heading-s">Reserve Place</button>
    `;
+
+   const reserveButton = document.createElement("a");
+   reserveButton.classList.add("button", "button-dark", "booking-button", "heading-s");
+   reserveButton.innerText = "Reserve Place";
+   reserveButton.setAttribute("href", "#form");
+
+   // focus on form input when button is clicked
+   reserveButton.onclick = () => {
+      const name = document.getElementById("name");
+      setTimeout(() => {
+         name.focus();
+      }, 500);
+
+   };
+
+   content.append(reserveButton);
+
    container.append(content);
    section.append(container);
 
