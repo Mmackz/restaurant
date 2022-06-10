@@ -67,13 +67,13 @@ export const Form = (() => {
    });
 
    // append date inputs
-   form.append(DateInputs);
+   form.append(DateInputs());
 
    // append time inputs
-   form.append(TimeInputs);
+   form.append(TimeInputs());
 
    // append guests input
-   form.append(GuestsInput);
+   form.append(GuestsInput());
 
    // create button to submit reservation form
    const submitBtn = document.createElement("button");
@@ -155,4 +155,14 @@ export const Form = (() => {
    });
 
    return form;
-})();
+});
+
+// BUGS/TODO
+/* 
+  - Close dropdown when arrow is clicked again
+  - Escape key should close dropdown
+  - Connect buttons to link to booking page
+  - Animate presses of +/- button ??MAYBE??
+  - Fine-tune CSS to look like figma design
+  - clamp max-width (1180px, 80vw, 1280px)
+*/

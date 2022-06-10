@@ -66,7 +66,7 @@ export const Hero = (() => {
    // attach blank white area
    const whiteArea = document.createElement("div");
    whiteArea.classList.add("booking-white-area");
-   whiteArea.append(Form);
+   whiteArea.append(Form());
    section.append(whiteArea);
 
    // add curve pattern
@@ -77,4 +77,4 @@ export const Hero = (() => {
    whiteArea.append(patternBottomRight);
    
    return section;
-})();
+});

@@ -49,4 +49,4 @@ export const GuestsInput = (() => {
       }
 
       return guestsInput;
-})();
+});
