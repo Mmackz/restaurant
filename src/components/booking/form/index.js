@@ -1,13 +1,14 @@
 import "./form.css";
-import { DateInputs } from "./date-inputs";
-import { TimeInputs } from "./time-inputs";
-import { GuestsInput } from "./guests-input";
+import { DateInputs } from "./form-inputs/date-inputs";
+import { TimeInputs } from "./form-inputs/time-inputs";
+import { GuestsInput } from "./form-inputs/guests-input";
 import { patternLines } from "../../home/images";
 import { makeWarning } from "./make-warning";
 
 export const Form = (() => {
    const form = document.createElement("form");
    form.classList.add("form");
+   form.setAttribute("id", "form");
 
    // make container for toast message
    const toastContainer = document.createElement("div");
@@ -26,6 +27,7 @@ export const Form = (() => {
    nameInput.type = "text";
    nameInput.name = "name";
    nameInput.placeholder = "Name";
+   nameInput.setAttribute("id", "name");
    nameInput.setAttribute("autocomplete", "off");
    nameInput.setAttribute("spellcheck", "false");
 
@@ -154,18 +156,3 @@ export const Form = (() => {
 
    return form;
 })();
-
-// BUGS/TODO
-/* 
-  - Close dropdown when arrow is clicked again
-  - Escape key should close dropdown
-  - Validate the form and display error messages (working on this!!)
-  - Button should center form and set focus on first input
-  - Animate presses of +/- button ??MAYBE??
-  - Fine-tune CSS to look like figma design
-  - clamp max-width (1180px, 80vw, 1280px)
-
-
-  On form submit, clear all previous warnings, and validate the form.
-  If any fields are invalid, display a warning message and add a class to the field.
-*/
