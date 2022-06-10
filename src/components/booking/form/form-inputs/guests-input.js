@@ -1,5 +1,5 @@
-import iconPlus from "./icons/icon-plus.svg";
-import iconMinus from "./icons/icon-minus.svg";
+import iconPlus from "../icons/icon-plus.svg";
+import iconMinus from "../icons/icon-minus.svg";
 
 export const GuestsInput = (() => {
       // default number of guests

@@ -1,6 +1,6 @@
 import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.css";
-import { makeWarning } from "./make-warning";
+import { makeWarning } from "../make-warning";
 
 export const DateInputs = (() => {
    // create date input

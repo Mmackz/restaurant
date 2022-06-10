@@ -1,6 +1,6 @@
-import iconArrow from "./icons/icon-arrow.svg";
-import iconCheck from "./icons/icon-check.svg";
-import { makeWarning } from "./make-warning";
+import iconArrow from "../icons/icon-arrow.svg";
+import iconCheck from "../icons/icon-check.svg";
+import { makeWarning } from "../make-warning";
 
 export const TimeInputs = (() => {
    // create time inputs
