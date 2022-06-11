@@ -17,6 +17,7 @@ function setEventListeners(home) {
    const logos = document.querySelectorAll(".logo");
    logos.forEach((logo) => {
       logo.addEventListener("click", (e) => {
+         clearInterval(window.intervalId);
          root.replaceChild(Home(), root.lastChild);
          setEventListeners(true);
       });
@@ -26,6 +27,7 @@ function setEventListeners(home) {
       const buttons = document.querySelectorAll(".button");
       buttons.forEach((button) => {
          button.addEventListener("click", (e) => {
+            clearInterval(window.intervalId);
             root.replaceChild(Booking(), root.lastChild);
             setEventListeners(false);
          });

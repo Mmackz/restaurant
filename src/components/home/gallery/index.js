@@ -3,7 +3,7 @@ import { makeImage } from "/src/components/shared/makeImage";
 import { changeGallery } from "./changeGallery";
 import * as images from "../images";
 
-export const Gallery = (() => {
+export const Gallery = () => {
    // create the gallery section
    const section = document.createElement("section");
    section.classList.add("gallery");
@@ -72,20 +72,21 @@ export const Gallery = (() => {
    });
 
    // cycle through gallery images
-   let count = 0;
-   setInterval(() => {
-      const item = galleryItems.children[count];
-      if (item.classList.contains("active")) {
-         if (count === 2) {
-            count = 0;
-         } else {
-            count += 1;
+   const intervalId = setInterval(() => {
+      if (document.getElementById("root").firstChild.children.length === 6) {
+         console.log("interval");
+         const items = galleryItems.children;
+         for (let i = 0; i < items.length; i++) {
+            if (items[i].classList.contains("active")) {
+               items[(i + 1) % 3].click();
+               break;
+            }
          }
       }
-      galleryItems.children[count].click();
-      count += 1;
-      if (count > 2) count = 0;
    }, 7500);
+
+   // put interval in global scope to be able to clear it later
+   window.intervalId = intervalId;
 
    // create a container for the gallery text content
    const galleryContent = document.createElement("div");
@@ -104,16 +105,21 @@ export const Gallery = (() => {
    const patternTopRight = document.createElement("img");
    patternTopRight.src = images.patternCurveTopRight;
    patternTopRight.alt = "Background Pattern";
-   patternTopRight.classList.add("pattern", "pattern-curve", "pattern-curve-top-right", "gallery-pattern-curve");
+   patternTopRight.classList.add(
+      "pattern",
+      "pattern-curve",
+      "pattern-curve-top-right",
+      "gallery-pattern-curve"
+   );
 
    const patternLine = document.createElement("img");
    patternLine.src = images.patternLines;
    patternLine.alt = "Foreground Line Pattern";
-   patternLine.classList.add("pattern", "pattern-lines","gallery-pattern-lines");
-         
+   patternLine.classList.add("pattern", "pattern-lines", "gallery-pattern-lines");
+
    imageContainer.append(patternLine);
    container.append(patternTopRight);
    section.appendChild(container);
 
    return section;
-});
+};
