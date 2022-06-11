@@ -11,7 +11,7 @@ export const makeImage = (images, alt, className = ["card-image"]) => {
             media="(min-width: 540px)"
             srcset="${images[2]} 1x, ${images[3]} 2x"
          />
-         <img class="${className.join(" ")}" src="${images[0]}" alt="${alt}" width="100%" />
+         <img class="${className.join(" ")}" src="${images[0]}" alt="${alt}" />
       `;
    }
 
@@ -29,7 +29,7 @@ export const makeImage = (images, alt, className = ["card-image"]) => {
             media="(min-width: 960px)"
             srcset="${images[4]} 1x, ${images[5]} 2x"
          />
-         <img class="${className.join(" ")}" src="${images[0]}" alt="${alt}" width="100%" />
+         <img class="${className.join(" ")}" src="${images[0]}" alt="${alt}" />
       `;
    }
    return picture;
