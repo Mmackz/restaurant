@@ -21,7 +21,7 @@ import {
 
 export const Info = () => {
    // create info section
-   const section = document.createElement("section");
+   const section = document.createElement("div");
    section.classList.add("info");
 
    // add info cards

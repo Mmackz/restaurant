@@ -18,7 +18,7 @@ import {
 
 export const Menu = () => {
    // create menu section
-   const section = document.createElement("section");
+   const section = document.createElement("div");
    section.classList.add("menu");
 
    const sectionInner = document.createElement("div");
