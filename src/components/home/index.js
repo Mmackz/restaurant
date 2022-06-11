@@ -5,7 +5,7 @@ import { Gallery } from "./gallery";
 import { Cta } from "./cta";
 import { Footer } from "../shared/footer";
 
-export default (() => {
+export default () => {
    const main = document.createElement("main");
    main.appendChild(Hero());
    main.appendChild(Info());
@@ -14,4 +14,4 @@ export default (() => {
    main.appendChild(Cta());
    main.appendChild(Footer());
    return main;
-});
+};

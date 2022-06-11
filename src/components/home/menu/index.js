@@ -16,7 +16,7 @@ import {
    salmonMobile2x
 } from "../images";
 
-export const Menu = (() => {
+export const Menu = () => {
    // create menu section
    const section = document.createElement("section");
    section.classList.add("menu");
@@ -55,7 +55,12 @@ export const Menu = (() => {
    );
 
    const menu3 = MenuItem(
-      [chocolateMobile, chocolateMobile2x, chocolateDesktopTablet, chocolateDesktopTablet2x],
+      [
+         chocolateMobile,
+         chocolateMobile2x,
+         chocolateDesktopTablet,
+         chocolateDesktopTablet2x
+      ],
       "A decedant chocolate mousse, topped with cherries",
       "Summer Fruit Chocolate Mousse",
       "Creamy mousse combined with summer fruits and dark chocolate shavings",
@@ -67,4 +72,4 @@ export const Menu = (() => {
    section.append(sectionInner);
 
    return section;
-});
+};

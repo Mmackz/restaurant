@@ -2,7 +2,7 @@ import iconArrow from "../icons/icon-arrow.svg";
 import iconCheck from "../icons/icon-check.svg";
 import { makeWarning } from "../make-warning";
 
-export const TimeInputs = (() => {
+export const TimeInputs = () => {
    // create time inputs
    const timeFormGroup = document.createElement("div");
    timeFormGroup.classList.add("form-group", "time-form-group");
@@ -139,7 +139,7 @@ export const TimeInputs = (() => {
          }
       });
    });
-   
+
    function toggleAmPmMenu() {
       amPmDropdown.classList.toggle("hidden");
       amPmInput.classList.toggle("active");
@@ -157,4 +157,4 @@ export const TimeInputs = (() => {
    }
 
    return timeFormGroup;
-});
+};

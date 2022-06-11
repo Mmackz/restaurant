@@ -10,7 +10,7 @@ import {
    logo
 } from "../images";
 
-export const Hero = (() => {
+export const Hero = () => {
    // create hero section
    const section = document.createElement("section");
    section.classList.add("hero");
@@ -51,4 +51,4 @@ export const Hero = (() => {
    section.append(content);
 
    return section;
-});
+};

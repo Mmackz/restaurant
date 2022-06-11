@@ -11,7 +11,7 @@ import {
    BgMobile2x
 } from "../images";
 
-export const Hero = (() => {
+export const Hero = () => {
    // create hero section
    const section = document.createElement("section");
    section.classList.add("booking-hero");
@@ -55,7 +55,6 @@ export const Hero = (() => {
       setTimeout(() => {
          name.focus();
       }, 500);
-
    };
 
    content.append(reserveButton);
@@ -73,8 +72,12 @@ export const Hero = (() => {
    const patternBottomRight = document.createElement("img");
    patternBottomRight.src = patternCurveBottomRight;
    patternBottomRight.alt = "Background Pattern";
-   patternBottomRight.classList.add("pattern", "pattern-curve", "pattern-curve-bottom-right");
+   patternBottomRight.classList.add(
+      "pattern",
+      "pattern-curve",
+      "pattern-curve-bottom-right"
+   );
    whiteArea.append(patternBottomRight);
-   
+
    return section;
-});
+};

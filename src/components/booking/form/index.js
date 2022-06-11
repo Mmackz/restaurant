@@ -5,7 +5,7 @@ import { GuestsInput } from "./form-inputs/guests-input";
 import { patternLines } from "../../home/images";
 import { makeWarning } from "./make-warning";
 
-export const Form = (() => {
+export const Form = () => {
    const form = document.createElement("form");
    form.classList.add("form");
    form.setAttribute("id", "form");
@@ -14,7 +14,8 @@ export const Form = (() => {
    const toastContainer = document.createElement("div");
    toastContainer.classList.add("toast-container");
    toastContainer.setAttribute("id", "toast");
-   toastContainer.textContent = "Your booking has been submitted. Please check your email for confirmation.";
+   toastContainer.textContent =
+      "Your booking has been submitted. Please check your email for confirmation.";
    form.append(toastContainer);
 
    // create name input
@@ -155,7 +156,7 @@ export const Form = (() => {
    });
 
    return form;
-});
+};
 
 // BUGS/TODO
 /* 

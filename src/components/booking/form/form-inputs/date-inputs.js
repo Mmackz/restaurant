@@ -2,7 +2,7 @@ import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.css";
 import { makeWarning } from "../make-warning";
 
-export const DateInputs = (() => {
+export const DateInputs = () => {
    // create date input
    const dateFormGroup = document.createElement("div");
    dateFormGroup.classList.add("form-group", "date-form-group");
@@ -103,9 +103,14 @@ export const DateInputs = (() => {
 
    dateInput.addEventListener("input", (e) => {
       removeWarnings(e.target);
-   })
+   });
 
-   dateFormGroup.append(dateLabel, inputGroup, dateInput, makeWarning("This field is incomplete"));
+   dateFormGroup.append(
+      dateLabel,
+      inputGroup,
+      dateInput,
+      makeWarning("This field is incomplete")
+   );
 
    function changeDate(selectedDates) {
       const date = new Date(selectedDates);
@@ -157,4 +162,4 @@ export const DateInputs = (() => {
    }
 
    return dateFormGroup;
-});
+};

@@ -9,7 +9,7 @@ import {
    readyBgMobile2x
 } from "../images";
 
-export const Cta = (() => {
+export const Cta = () => {
    // create the cta section
    const section = document.createElement("section");
    section.classList.add("cta");
@@ -44,4 +44,4 @@ export const Cta = (() => {
    container.append(heading, button);
    section.append(container);
    return section;
-});
+};

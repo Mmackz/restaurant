@@ -6,4 +6,4 @@ export const makeWarning = (message) => {
    warningText.textContent = message;
    nameValidationWarning.appendChild(warningText);
    return nameValidationWarning;
-}
+};

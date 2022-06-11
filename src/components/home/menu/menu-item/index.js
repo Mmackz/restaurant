@@ -1,7 +1,7 @@
 import "./menu-item.css";
 import { makeImage } from "/src/components/shared/makeImage";
 
-export const MenuItem = ((images, alt, heading, text) => {
+export const MenuItem = (images, alt, heading, text) => {
    const menuItem = document.createElement("div");
    menuItem.classList.add("menu-item");
 
@@ -28,5 +28,5 @@ export const MenuItem = ((images, alt, heading, text) => {
 
    menuItem.append(imageContainer, content);
 
-   return menuItem
-});
+   return menuItem;
+};
