@@ -19,6 +19,7 @@ function setEventListeners(home) {
       logo.addEventListener("click", (e) => {
          clearInterval(window.intervalId);
          root.replaceChild(Home(), root.lastChild);
+         window.scrollTo(0, 0);
          setEventListeners(true);
       });
    });
@@ -29,6 +30,7 @@ function setEventListeners(home) {
          button.addEventListener("click", (e) => {
             clearInterval(window.intervalId);
             root.replaceChild(Booking(), root.lastChild);
+            window.scrollTo(0, 0);
             setEventListeners(false);
          });
       });

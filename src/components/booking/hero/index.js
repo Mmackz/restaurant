@@ -52,7 +52,10 @@ export const Hero = () => {
    // scroll to form and focus on input when button is clicked
    reserveButton.onclick = () => {
       const name = document.getElementById("name");
-      window.scrollTo(0, 400);
+      window.scrollTo({
+         top: 400,
+         behavior: "smooth"
+      });
       setTimeout(() => {
          name.focus();
       }, 500);
