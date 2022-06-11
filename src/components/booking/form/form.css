@@ -12,7 +12,6 @@
    padding: clamp(1.5rem, 8.5vw, 2rem);
    min-height: 36.5625rem;
    box-shadow: 0px 55px 90px -35px rgba(56, 66, 85, 0.5);
-   scroll-margin-top: 4rem;
 }
 
 .form input,

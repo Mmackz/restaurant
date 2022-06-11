@@ -44,14 +44,15 @@ export const Hero = () => {
       </p>
    `;
 
-   const reserveButton = document.createElement("a");
+   const reserveButton = document.createElement("button");
    reserveButton.classList.add("button", "button-dark", "booking-button", "heading-s");
+   reserveButton.setAttribute("aria-label", "jump to form");
    reserveButton.innerText = "Reserve Place";
-   reserveButton.setAttribute("href", "#form");
 
-   // focus on form input when button is clicked
+   // scroll to form and focus on input when button is clicked
    reserveButton.onclick = () => {
       const name = document.getElementById("name");
+      window.scrollTo(0, 400);
       setTimeout(() => {
          name.focus();
       }, 500);
