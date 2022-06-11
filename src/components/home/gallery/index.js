@@ -74,7 +74,6 @@ export const Gallery = () => {
    // cycle through gallery images
    const intervalId = setInterval(() => {
       if (document.getElementById("root").firstChild.children.length === 6) {
-         console.log("interval");
          const items = galleryItems.children;
          for (let i = 0; i < items.length; i++) {
             if (items[i].classList.contains("active")) {
