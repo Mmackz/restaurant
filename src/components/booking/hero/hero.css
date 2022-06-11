@@ -78,12 +78,12 @@
 @media (min-width: 960px) {
    .booking-white-area {
       height: 20rem;
-      max-width: clamp(1175px, 80vw, 1280px);
+      max-width: clamp(1190px, 80vw, 1190px);
       margin: 0 auto;
    }
 
    .booking-hero .hero-content {
-      max-width: clamp(1175px, 80vw, 1280px);
+      max-width: clamp(1190px, 80vw, 1190px);
    }
 
    .booking-hero .hero-heading {
