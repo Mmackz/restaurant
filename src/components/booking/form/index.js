@@ -158,8 +158,3 @@ export const Form = () => {
    return form;
 };
 
-// BUGS/TODO
-/* 
-  - Fine-tune CSS to look like figma design
-  - clamp max-width (1180px, 80vw, 1190px)
-*/

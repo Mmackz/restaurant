@@ -80,3 +80,9 @@
       margin-right: auto;
    }
 }
+
+@media (min-width: 1441px) {
+   .footer-inner {
+      max-width: 1280px;
+   }
+}

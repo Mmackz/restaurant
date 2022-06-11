@@ -104,3 +104,13 @@
       max-width: 27rem;
    }
 }
+
+@media (min-width: 1441px) {
+   .booking-white-area {
+      max-width: 1280px;
+   }
+
+   .booking-hero .hero-content {
+      max-width: 1280px;
+   }
+}
