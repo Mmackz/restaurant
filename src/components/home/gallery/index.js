@@ -71,6 +71,22 @@ export const Gallery = (() => {
       item.addEventListener("click", changeGallery);
    });
 
+   // cycle through gallery images
+   let count = 0;
+   setInterval(() => {
+      const item = galleryItems.children[count];
+      if (item.classList.contains("active")) {
+         if (count === 2) {
+            count = 0;
+         } else {
+            count += 1;
+         }
+      }
+      galleryItems.children[count].click();
+      count += 1;
+      if (count > 2) count = 0;
+   }, 7500);
+
    // create a container for the gallery text content
    const galleryContent = document.createElement("div");
    galleryContent.classList.add("gallery-content", "card-content");
