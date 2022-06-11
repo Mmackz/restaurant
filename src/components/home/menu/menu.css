@@ -57,12 +57,13 @@
    }
 
    .menu-header {
-      padding-top: 1rem;
+      padding-top: 7rem;
    }
 
    .menu-header > .card-content {
       width: 100%;
       padding: 0;
+      max-width: 420px;
    }
 
    .menu-header .card-heading {
