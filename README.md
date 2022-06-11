@@ -22,8 +22,8 @@ The design files are from Front End Mentors Dine Restaurant Challenge. The page 
 
 ### Links
 
-- Solution URL: [https://github.com/Mmackz/restaurant](https://github.com/Mmackz/restaurant-top)
-- Live Site URL: [https://Mmackz.github.io/restaurant](https://Mmackz.github.io/restaurant-top)
+- Solution URL: [https://github.com/Mmackz/restaurant](https://github.com/Mmackz/restaurant)
+- Live Site URL: [https://Mmackz.github.io/restaurant](https://Mmackz.github.io/restaurant)
 
 ### Built with
 
