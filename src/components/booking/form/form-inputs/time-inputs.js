@@ -118,6 +118,7 @@ export const TimeInputs = () => {
    timeFormGroup.append(timeLabel, inputGroup, makeWarning("This field is incomplete"));
 
    // event listener for am/pm
+   amPmInput.addEventListener("mousedown", toggleAmPmMenu);
    amPmInput.addEventListener("focusin", toggleAmPmMenu);
    amPmInput.addEventListener("focusout", toggleAmPmMenu);
 
@@ -140,9 +141,21 @@ export const TimeInputs = () => {
       });
    });
 
-   function toggleAmPmMenu() {
-      amPmDropdown.classList.toggle("hidden");
-      amPmInput.classList.toggle("active");
+   function toggleAmPmMenu(e) {
+      switch (e.type) {
+         case "mousedown":
+            amPmDropdown.classList.toggle("hidden");
+            amPmInput.classList.toggle("active");
+            break;
+         case "focusin":
+            amPmDropdown.classList.remove("hidden");
+            amPmInput.classList.add("active");
+            break;
+         case "focusout":
+            amPmDropdown.classList.add("hidden");
+            amPmInput.classList.remove("active");
+            break;
+      }
    }
 
    function removeWarnings(target) {
