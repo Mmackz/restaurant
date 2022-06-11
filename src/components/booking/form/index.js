@@ -159,10 +159,6 @@ export const Form = (() => {
 
 // BUGS/TODO
 /* 
-  - Close dropdown when arrow is clicked again
-  - Escape key should close dropdown
-  - Connect buttons to link to booking page
-  - Animate presses of +/- button ??MAYBE??
   - Fine-tune CSS to look like figma design
   - clamp max-width (1180px, 80vw, 1280px)
 */
