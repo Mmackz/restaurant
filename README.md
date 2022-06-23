@@ -13,7 +13,7 @@
 ## Overview
 
 ### About the project
-This project was built to meet the requirements for TOP restaurant project, which is to build a single-page application (SPA) using modular components in written in vanilla JS and bundling them using webpack.
+This project was built to meet the requirements for TOP restaurant project, which is to build a single-page application (SPA) using modular components written in vanilla JS and bundling them using webpack.
 The design files are from Front End Mentors Dine Restaurant Challenge. The page is responsive and built using a mobile-first approach.
 
 ### Screenshot
@@ -36,4 +36,4 @@ The design files are from Front End Mentors Dine Restaurant Challenge. The page 
 
 ### Acknowledgments
 
-  - This is a solution to the [Dine Website Challenge challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/dine-restaurant-website-yAt7Vvxt7). 
+  - This is a solution to the [Dine Website Challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/dine-restaurant-website-yAt7Vvxt7). 
